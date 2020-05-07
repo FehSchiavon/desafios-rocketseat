@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de cursos e iframe</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+
+        <header>
+            <div id="header">
+                <a href="./index.html">Home</a>
+                <a href="https://rocketseat.com.br/" target="_blank">Sobre</a>
+                <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
+                <a href="./content.html">Conteúdo</a>             
+            </div>
+        </header>
+
+        <main>
+            <h1>Conheça um pouco mais nossos conteúdos...</h1>
+            <section>
+                <div class="courses" id="starter">
+                    <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="starter">
+                    <div class="info">
+                        <ul>
+                            <li>Gratuito</li>
+                            <li>05 Cursos</li>
+                            <li>43 Módulos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="courses" id="launchbase">
+                    <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="starter">
+                    <div class="info">
+                        <ul>
+                            <li>Pago</li>
+                            <li>46 Módulos</li>
+                            <li>332 Aulas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="courses" id="gostack">
+                    <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="starter">
+                    <div class="info">
+                        <ul>
+                            <li>Pago</li>
+                            <li>91 Módulos</li>
+                            <li>245 Aulas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="footer">
+                <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+                <a href="https://www.instagram.com/rocketseat_oficial/" target="_blank">Instagram</a>
+                <a href="https://pt-br.facebook.com/rocketseat/" target="_blank">Facebook</a>
+            </div>
+        </footer>
+
+        <!--MODAL-->
+        <span>
+            <div class="modal-overlay">
+                <div class="modal">
+                    <a class="close-modal">
+                        <i class="material-icons">close</i>
+                    </a>
+                    <div class="modal-content">
+                        <!--CONTENT-->
+                        <iframe src="https://rocketseat.com.br/starter" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>    
+        </span>
+        <script src="script.js"></script>
+    </body>
+</html>
