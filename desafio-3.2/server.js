@@ -5,10 +5,10 @@ const server = express()
 
 server.use(express.static('public'))
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
-nunjucks.configure("view", {
-    express: server
+nunjucks.configure("views", {
+    express:server
 })
 
 server.get("/", function(req, res) {
@@ -23,6 +23,6 @@ server.use(function(req, res) {
     return res.status(404).render("not-found");
 })
 
-server.listen(7000, function(){
+server.listen(7000, function() {
     console.log("server is runing")
 })
