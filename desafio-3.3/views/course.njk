@@ -1,0 +1,18 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    {% for item in items %}
+    <title>Curso {{ item.name_course }}</title>
+    {% endfor %}
+{% endblock %}
+        
+{% block content %}
+<main>
+    <section>
+        <h1>{{ course.id }}</h1>
+        <p>{{ course.amount_model }}</p>
+        <iframe src="https://rocketseat.com.br/{{ course.id }}" frameborder="0"></iframe>
+    </section>
+</main>
+
+{% endblock %}
