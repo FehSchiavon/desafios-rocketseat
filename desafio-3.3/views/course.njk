@@ -3,16 +3,15 @@
 {% block head %}
     {% for item in items %}
     <title>Curso {{ item.name_course }}</title>
-    {% endfor %}}
+    {% endfor %}
 {% endblock %}
         
 {% block content %}
 <main>
-    <h1></h1>
     <section>
-        {% for item in items %}}
-        <iframe src="https://rocketseat.com.br/{{ item.id }}" frameborder="0"></iframe>
-        {% endfor %}}
+        <h1>{{ course.id }}</h1>
+        <p>{{ course.amount_model }}</p>
+        <iframe src="https://rocketseat.com.br/{{ course.id }}" frameborder="0"></iframe>
     </section>
 </main>
 
