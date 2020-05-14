@@ -7,12 +7,14 @@
 {% endblock %}
         
 {% block content %}
-<main>
-    <section>
-        <h1>{{ course.id }}</h1>
-        <p>{{ course.amount_model }}</p>
+
+<div class="container-courses">
+    <div class="content-courses">
+        {# <h1>{{ course.id }}</h1>
+        <p>{{ course.amount_model }}</p> #}
         <iframe src="https://rocketseat.com.br/{{ course.id }}" frameborder="0"></iframe>
-    </section>
-</main>
+    </div>
+</div>
+
 
 {% endblock %}
