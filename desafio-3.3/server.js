@@ -47,18 +47,6 @@ server.get("/courses/:id", function (req, res) {
     return res.render("course", { course } )
 })
 
-// server.get("/course/:id", function(req, res) {
-//     const id = req.params.id
-//     console.log(id)
-
-//     const course = courses.find(function (course) {
-//         return course.id == id
-//     })
-//     console.log(course)
-
-//     return res.render("info-course", { items: courses }, { course } )
-// })
-
 server.use(function(req, res) {
     return res.status(404).render("not-found");
 })
