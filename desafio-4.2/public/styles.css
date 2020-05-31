@@ -102,6 +102,8 @@ header {
 .details .item:first-child {
     border: none;
 }
+/* O last-child esta funcionando */
+
 
 .details h3,
 .details .item div:nth-child(1) {
