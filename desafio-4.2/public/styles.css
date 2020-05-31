@@ -71,7 +71,7 @@ header {
     min-height: 400px;
     margin: 45px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
     box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
 
     animation: up 200ms ease-in-out;
@@ -94,17 +94,16 @@ header {
 }
 
 .details .item {
-    border-bottom: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
     padding: 16px;
 }
 
+/* ERRO */
 .details .item:first-child {
-    border-top: 2px solid var(--secondary-color);
-}
-
-.details .item:last-child {
     border: none;
 }
+/* O last-child esta funcionando */
+
 
 .details h3,
 .details .item div:nth-child(1) {
