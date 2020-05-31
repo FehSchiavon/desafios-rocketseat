@@ -19,7 +19,6 @@
   <a href="#licença">Licença</a> 
 </h3>
 
-<img src="" width="1200">
 
 ## :information_source: Sobre
 
