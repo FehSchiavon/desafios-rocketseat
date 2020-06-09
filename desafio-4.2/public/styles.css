@@ -98,11 +98,11 @@ header {
     padding: 16px;
 }
 
-/* ERRO */
-.details .item:first-child {
+
+.details .item:first-child,
+.details .item:nth-child(2) {
     border: none;
 }
-/* O last-child esta funcionando */
 
 
 .details h3,
