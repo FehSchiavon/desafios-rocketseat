@@ -2,7 +2,7 @@ const express = require('express')
 const routes = express.Router()
 
 routes.get('/', function(req, res) {
-    res.send('Routas')
+    return res.render('teachers/register')
 })
 
 module.exports = routes
