@@ -11,17 +11,12 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <div class="links">
-                <a href="" img src="" alt=""></a>
-                <a href="/">Cadastro</a>
-                <a href="/login">Login</a>
-            </div>
-        </header>
+
+        {% block header %}
+        {% endblock header %}
 
         {% block content %}
         {% endblock %}
-
 
     </body>
 </html>

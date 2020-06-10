@@ -4,14 +4,49 @@
     <title>Cadastro</title>
 {% endblock %}
 
+
+{% block header %}
+
+{% endblock %}
+
+
 {% block content %}
 
+
+
 <div class="content">
-    <div class="description">
-    
+    <header>
+        <a href="/">Cadastro</a>
+        <a href="/login">Login</a>
+    </header>
+
+    <div class="welcome">
+        <h2>Bem vindo</h2>
+        <h3>Cadastre sua conta agora</h3>
     </div>
+
+
     <div class="register">
-    
+        <p>Usuário</p>
+        <input type="text" placeholder="Digite seu nome">
+        <p>Senha</p>
+        <input type="password">
+
+        <div class="forgot-password">
+            <a href="#">Esqueci minha senha?</a>
+        </div>
+
+        <button class="button" type="submit">Login</button>
+
+        <div class="suport">
+            <a href="#">Ajuda & Suporte</a>
+        </div>
+    </div>
+
+    <div class="media">
+        <a href="#">facebook</a>
+        <a href="#">instagram</a>
+        <a href="#">linkedin</a>
     </div>
 </div>
 
