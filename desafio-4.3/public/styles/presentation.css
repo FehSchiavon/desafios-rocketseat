@@ -1,0 +1,22 @@
+/* PRESENTATION */
+
+.info {
+    margin-top: 20px;
+}
+
+.info .logo {
+    display: flex;
+    align-items: center;
+}
+
+.info .logo img {
+    width: 70px;
+    height: 70px;
+    margin-left: 35px;
+}
+
+.info .logo h3 {
+    margin-left: 25px;
+    font-size: 50px;
+    color: var(--primary-color);
+}
