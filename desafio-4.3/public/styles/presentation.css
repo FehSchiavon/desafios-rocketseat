@@ -39,6 +39,7 @@
     font-size: 38px;
     color: var(--primary-color);
     width: 60%;
+    text-align: center;
 }
 
 .info .presentation h5 {
@@ -47,6 +48,7 @@
     color: #2F2E41;
     font-weight: normal;
     width: 60%;
+    text-align: center;
 }
 
 .info .action {
