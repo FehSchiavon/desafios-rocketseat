@@ -38,12 +38,15 @@
 .info .presentation h4 {
     font-size: 38px;
     color: var(--primary-color);
+    width: 60%;
 }
 
 .info .presentation h5 {
+    margin-top: 30px;
     font-size: 28px;
     color: #2F2E41;
     font-weight: normal;
+    width: 60%;
 }
 
 .info .action {
@@ -60,4 +63,5 @@
     border-radius: 25px;
     font-weight: bold;
     font-size: 20px;
+    width: 60%;
 }
