@@ -83,38 +83,43 @@
     height: auto;
     background-color: #3C46A7;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
 
 .content .categories p {
-    margin-top: 20px;
+    margin: 20px 0px 10px 0px;
     padding-top: 10px;
     text-align: center;
 }
 
-.content .categories .category {
+.content .categories .items {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.content .categories span {
-    width: 130px;
+.content .categories .items span {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+
+    width: 120px;
     background-color: #F9617D;
 
     border-radius: 35px;
-}
-
-.content .categories span input {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    /* margin: 0px !important; */
-}
-.content .categories span input + input {
+    padding-left: 20px;
     margin-left: 5px;
 }
+
+.content .categories .items span input {
+    align-items: center;
+    margin: 10px;
+}
+
+.content .categories .items span + span {
+    margin-left: 5px;
+}
+
 
 .content .forgot-password {
     width: 300px;
