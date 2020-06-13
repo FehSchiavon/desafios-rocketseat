@@ -1,5 +1,11 @@
 /* REGISTER */
 
+body {
+    grid-template-columns: 20% 60% 20%;
+    overflow: hidden;
+    background-color: #3C46A7;
+}
+
 .content {
     background-color: var(--primary-color);
     color: #fff;
@@ -26,7 +32,7 @@
 }
 
 .content .welcome {
-    margin-top: 100px;
+    margin-top: 40px;
     text-align: center;
     line-height: 35px;
 }
@@ -59,11 +65,6 @@
     font-size: 15px;
     color: #f0f0f5;
     text-align: left;
-}
-
-.content .level {
-    display: flex;
-
 }
 
 .content .level .school {
@@ -120,6 +121,9 @@
     margin-left: 5px;
 }
 
+.content .plus {
+    margin-top: 10px;
+}
 
 .content .forgot-password {
     width: 300px;
@@ -134,7 +138,7 @@
 }
 
 .content .register .button {
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 15px 0px;
     width: 300px;
     border-radius: 25px;
@@ -145,6 +149,7 @@
 
     color: #fff;
     background-color: var(--secundary-color);
+    font-size: 20px;
     font-weight: bold;
     transition: 500ms;
 
@@ -157,7 +162,7 @@
 }
 
 .content .support {
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .content .support a {
@@ -166,19 +171,3 @@
     font-weight: lighter;
     font-size: 15px;
 }
-
-.content .media { 
-    margin: 155px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content .media img {
-    width: 50px;
-    height: 50px;
-}
-
-.content .media img + img {
-    margin-left: 40px;
-} 

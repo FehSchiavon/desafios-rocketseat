@@ -1,5 +1,10 @@
 /* LOGIN */
 
+body {
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+}
+
 .content {
     background-color: var(--primary-color);
     color: #fff;
