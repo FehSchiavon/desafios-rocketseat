@@ -1,9 +1,8 @@
-/* REGISTER */
+/* LOGIN */
 
 body {
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 60% 40%;
     overflow: hidden;
-    background-color: #3C46A7;
 }
 
 .content {
@@ -32,7 +31,7 @@ body {
 }
 
 .content .welcome {
-    margin-top: 40px;
+    margin-top: 100px;
     text-align: center;
     line-height: 35px;
 }
@@ -67,64 +66,6 @@ body {
     text-align: left;
 }
 
-.content .level .school {
-    width: 300px;
-    padding: 15px 0px;
-}
-
-.content .level .school,
-.content .level .school option {
-    background-color: #3C46A7;
-    color: #fff;
-    font-size: 15px;
-}
-
-.content .categories {
-    width: 300px;
-    height: auto;
-    background-color: #3C46A7;
-    border-radius: 5px;
-    padding-bottom: 10px;
-}
-
-.content .categories p {
-    margin: 20px 0px 10px 0px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.content .categories .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.content .categories .items span {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-
-    width: 120px;
-    background-color: #F9617D;
-
-    border-radius: 35px;
-    padding-left: 20px;
-    margin-left: 5px;
-}
-
-.content .categories .items span input {
-    align-items: center;
-    margin: 10px;
-}
-
-.content .categories .items span + span {
-    margin-left: 5px;
-}
-
-.content .plus {
-    margin-top: 10px;
-}
-
 .content .forgot-password {
     width: 300px;
     text-align: right;
@@ -138,7 +79,7 @@ body {
 }
 
 .content .register .button {
-    margin-top: 10px;
+    margin-top: 40px;
     padding: 15px 0px;
     width: 300px;
     border-radius: 25px;
@@ -149,7 +90,6 @@ body {
 
     color: #fff;
     background-color: var(--secundary-color);
-    font-size: 20px;
     font-weight: bold;
     transition: 500ms;
 
@@ -162,7 +102,7 @@ body {
 }
 
 .content .support {
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .content .support a {
@@ -171,3 +111,19 @@ body {
     font-weight: lighter;
     font-size: 15px;
 }
+
+.content .media { 
+    margin: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .media img {
+    width: 50px;
+    height: 50px;
+}
+
+.content .media img + img {
+    margin-left: 40px;
+} 

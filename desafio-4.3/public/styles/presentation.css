@@ -57,13 +57,25 @@
     justify-content: center;
 }
 
-.info .action button {
+.info .action .button {
     color: #fff;
     background-color: var(--primary-color);
+
     width: 400px;
     padding: 15px 0px;
     border-radius: 25px;
     font-weight: bold;
     font-size: 20px;
     width: 60%;
+
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+
+    transition: 400ms;
+}
+
+.info .action .button:hover {
+    background-color: #3C46A7;
+    cursor: pointer;
 }

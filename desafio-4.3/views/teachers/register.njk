@@ -1,77 +1,123 @@
 {% extends 'layout.njk' %}
 
-{% block head %}
-    <title>Cadastro</title>
-{% endblock %}
-
-
-{% block header %}
-
+{% block styles %}
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/presentation.css">
 {% endblock %}
 
 
 {% block content %}
 
-<div class="info">
+    <div class="info">
 
-    <div class="logo">
-        <img src="./assets/logo-school.svg" alt="">
-        <h3>Digital School</h3>
+        {# <div class="logo">
+            <img src="./assets/logo-school.svg" alt="">
+            <h3>Digital School</h3>
+        </div>
+
+        <div class="presentation">
+            <img src="./assets/user.svg" alt="">
+            <h4>Vamos fazer acontecer os seus sonhos</h4>
+            <h5>Agora e melhor momentos para investir em você</h5>
+        </div>
+
+        <div class="action">
+            <button type="submit">Inscreva-se</button>
+        </div> #}
+
     </div>
 
-    <div class="presentation">
-        <img src="./assets/user.svg" alt="">
-        <h4>Vamos fazer acontecer os seus sonhos</h4>
-        <h5>Agora e melhor momentos para investir em você</h5>
-    </div>
 
-    <div class="action">
-        <button type="submit">Inscreva-se</button>
-    </div>
+    <div class="content">
+        <header>
+            <a href="/register">Cadastro</a>
+            <a href="/">Login</a>
+        </header>
 
-</div>
+        <div class="welcome">
+            <h2>Seja bem vindo a Digital</h2>
+            <h3>Cadastre sua conta agora</h3>
+        </div>
 
+        <div class="register">
 
-<div class="content">
-    <header>
-        <a href="/">Cadastro</a>
-        <a href="/login">Login</a>
-    </header>
+            <div class="data">
 
-    <div class="welcome">
-        <h2>Bem vindo</h2>
-        <h3>Cadastre sua conta agora</h3>
-    </div>
+                <div class="avatar_url">
+                    <p>Avatar URL</p>
+                    <input type="url" placeholder="  http://" name="avatar_url" required>
+                </div>
 
-    <div class="register">
+                <div id="user">
+                    <input type="text" placeholder="  Nome completo" name="name" required>
+                </div>
 
-        <div class="data">
-            <div id="user">
-                <p>Usuário</p>
-                <input type="text" placeholder="  Digite seu nome">
+                <div class="date">
+                    <input type="text" placeholder="  Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/>
+                </div>
+
+                <div class="level">
+                    <select class="school" name="school" required>
+                        <option value="" disabled selected>Grau de Escolaridade</option>
+                        <option value="medio">Ensino Médio Completo</option>
+                        <option value="superior">Ensino Superior Completo</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado">Doutorado</option>
+                    </select>
+                </div>
+
+                <div class="categories">
+                    <p>Ensino</p>
+
+                    <div class="items" >
+                        <span><input type="radio" name="category" value="local" checked>Presencial</span>
+                        <span><input type="radio" name="category" value="online">À&nbsp;distância</span>
+                    </div>
+
+                </div>
+
+                <div class="plus">
+                    <input type="text" placeholder="  Áreas de atuação (separados por vírgula)" name="plus">
+                </div>
+
+                <div id="password">
+                    <input type="password" placeholder="  Senha" name="password">  
+                </div>
+
+                <div id="password">
+                    <input type="password" placeholder="  Confirmar senha" name="password2">  
+                </div>
+
             </div>
-            <div id="password">
-                <p>Senha</p>
-                <input type="password" placeholder="  ****************">  
+
+
+            <button class="button" type="submit">Cadastrar-se</button>
+
+            <div class="support">
+                <a href="#">Ajuda & Suporte</a>
             </div>
         </div>
 
-        <div class="forgot-password">
-            <a href="#">Esqueci minha senha?</a>
-        </div>
-
-        <button class="button" type="submit">Login</button>
-
-        <div class="support">
-            <a href="#">Ajuda & Suporte</a>
-        </div>
     </div>
 
-    <div class="media">
-        <img src="./assets/facebook.svg" alt="">
-        <img src="./assets/instagram.svg" alt="">
-        <img src="./assets/link.svg" alt="">
-    </div>
-</div>
+    <div class="info">
 
-{% endblock%}
+        {# <div class="logo">
+            <img src="./assets/logo-school.svg" alt="">
+            <h3>Digital School</h3>
+        </div>
+
+        <div class="presentation">
+            <img src="./assets/user.svg" alt="">
+            <h4>Vamos fazer acontecer os seus sonhos</h4>
+            <h5>Agora e melhor momentos para investir em você</h5>
+        </div>
+
+        <div class="action">
+            <button type="submit">Inscreva-se</button>
+        </div> #}
+
+    </div>
+
+
+{% endblock %}
