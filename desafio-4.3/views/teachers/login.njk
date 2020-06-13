@@ -1,0 +1,77 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+    <title>Cadastro</title>
+{% endblock %}
+
+
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="info">
+
+        <div class="logo">
+            <img src="./assets/logo-school.svg" alt="">
+            <h3>Digital School</h3>
+        </div>
+
+        <div class="presentation">
+            <img src="./assets/user.svg" alt="">
+            <h4>Vamos fazer acontecer os seus sonhos</h4>
+            <h5>Agora e melhor momentos para investir em você</h5>
+        </div>
+
+        <div class="action">
+            <a class="button" href="/register">Inscreva-se</a>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <header>
+            <a href="/register">Cadastro</a>
+            <a href="/">Login</a>
+        </header>
+
+        <div class="welcome">
+            <h2>Bem vindo</h2>
+            <h3>Cadastre sua conta agora</h3>
+        </div>
+
+        <div class="register">
+
+            <div class="data">
+                <div id="user">
+                    <p>Usuário</p>
+                    <input type="text" placeholder="  Digite seu nome">
+                </div>
+                <div id="password">
+                    <p>Senha</p>
+                    <input type="password" placeholder="  ****************">  
+                </div>
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Esqueci minha senha?</a>
+            </div>
+
+            <button class="button" type="submit">Login</button>
+
+            <div class="support">
+                <a href="#">Ajuda & Suporte</a>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="./assets/facebook.svg" alt="">
+            <img src="./assets/instagram.svg" alt="">
+            <img src="./assets/link.svg" alt="">
+        </div>
+    </div>
+
+{% endblock%}
