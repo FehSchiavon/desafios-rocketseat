@@ -9,4 +9,8 @@ routes.get('/register', function(req, res) {
     return res.render('teachers/register')
 })
 
+routes.post('/', function(req, res) {
+    return res.send('Recebido')
+})
+
 module.exports = routes

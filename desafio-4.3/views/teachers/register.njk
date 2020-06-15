@@ -10,21 +10,6 @@
 
     <div class="info">
 
-        {# <div class="logo">
-            <img src="./assets/logo-school.svg" alt="">
-            <h3>Digital School</h3>
-        </div>
-
-        <div class="presentation">
-            <img src="./assets/user.svg" alt="">
-            <h4>Vamos fazer acontecer os seus sonhos</h4>
-            <h5>Agora e melhor momentos para investir em você</h5>
-        </div>
-
-        <div class="action">
-            <button type="submit">Inscreva-se</button>
-        </div> #}
-
     </div>
 
 
@@ -39,83 +24,72 @@
             <h3>Cadastre sua conta agora</h3>
         </div>
 
-        <div class="register">
+        <form class="form" method="POST" action="/">
 
-            <div class="data">
+            <div class="register">
 
-                <div class="avatar_url">
-                    <p>Avatar URL</p>
-                    <input type="url" placeholder="  http://" name="avatar_url" required>
-                </div>
+                <div class="data">
 
-                <div id="user">
-                    <input type="text" placeholder="  Nome completo" name="name" required>
-                </div>
+                    <div class="avatar_url">
+                        <p>Avatar URL</p>
+                        <input type="url" placeholder="  http://" name="avatar_url" required>
+                    </div>
 
-                <div class="date">
-                    <input type="text" placeholder="  Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/>
-                </div>
+                    <div id="user">
+                        <input type="text" placeholder="  Nome completo" name="name" required>
+                    </div>
 
-                <div class="level">
-                    <select class="school" name="school" required>
-                        <option value="" disabled selected>Grau de Escolaridade</option>
-                        <option value="medio">Ensino Médio Completo</option>
-                        <option value="superior">Ensino Superior Completo</option>
-                        <option value="mestrado">Mestrado</option>
-                        <option value="doutorado">Doutorado</option>
-                    </select>
-                </div>
+                    <div class="date">
+                        <input type="text" placeholder="  Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/>
+                    </div>
 
-                <div class="categories">
-                    <p>Ensino</p>
+                    <div class="level">
+                        <select class="school" name="school" required>
+                            <option value="" disabled selected>Grau de Escolaridade</option>
+                            <option value="medio">Ensino Médio Completo</option>
+                            <option value="superior">Ensino Superior Completo</option>
+                            <option value="mestrado">Mestrado</option>
+                            <option value="doutorado">Doutorado</option>
+                        </select>
+                    </div>
 
-                    <div class="items" >
-                        <span><input type="radio" name="category" value="local" checked>Presencial</span>
-                        <span><input type="radio" name="category" value="online">À&nbsp;distância</span>
+                    <div class="categories">
+                        <p>Ensino</p>
+
+                        <div class="items" >
+                            <span><input type="radio" name="category" value="local" checked>Presencial</span>
+                            <span><input type="radio" name="category" value="online">À&nbsp;distância</span>
+                        </div>
+
+                    </div>
+
+                    <div class="plus">
+                        <input type="text" placeholder="  Áreas de atuação (separados por vírgula)" name="plus">
+                    </div>
+
+                    <div id="password">
+                        <input type="password" placeholder="  Senha" name="password">  
+                    </div>
+
+                    <div id="password">
+                        <input type="password" placeholder="  Confirmar senha" name="password2">  
                     </div>
 
                 </div>
 
-                <div class="plus">
-                    <input type="text" placeholder="  Áreas de atuação (separados por vírgula)" name="plus">
-                </div>
 
-                <div id="password">
-                    <input type="password" placeholder="  Senha" name="password">  
-                </div>
+                <button class="button" type="submit">Cadastrar-se</button>
 
-                <div id="password">
-                    <input type="password" placeholder="  Confirmar senha" name="password2">  
+                <div class="support">
+                    <a href="#">Ajuda & Suporte</a>
                 </div>
-
             </div>
-
-
-            <button class="button" type="submit">Cadastrar-se</button>
-
-            <div class="support">
-                <a href="#">Ajuda & Suporte</a>
-            </div>
-        </div>
+        </form>
 
     </div>
 
+
     <div class="info">
-
-        {# <div class="logo">
-            <img src="./assets/logo-school.svg" alt="">
-            <h3>Digital School</h3>
-        </div>
-
-        <div class="presentation">
-            <img src="./assets/user.svg" alt="">
-            <h4>Vamos fazer acontecer os seus sonhos</h4>
-            <h5>Agora e melhor momentos para investir em você</h5>
-        </div>
-
-        <div class="action">
-            <button type="submit">Inscreva-se</button>
-        </div> #}
 
     </div>
 
