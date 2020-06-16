@@ -11,6 +11,18 @@
       "plus": "Alguma",
       "password": "sdasadsad",
       "password2": "sadsdaasd"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Felipe",
+      "birth": 1591228800000,
+      "created_at": 1592329742697,
+      "school": "superior",
+      "category": "online",
+      "plus": "Alguma",
+      "password": "dddsaasd",
+      "password2": "dasdasads"
     }
   ]
 }
