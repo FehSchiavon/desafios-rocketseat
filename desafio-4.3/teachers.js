@@ -1,3 +1,6 @@
+const fs = require('fs') // File System
+const data = require('./data.json')
+
 // Função POST
 
 // Create
@@ -14,8 +17,15 @@ exports.post = function(req, res) { //req.body e usado no method POST
             return res.send('Please, fill all fields!')
     }
 
+    data.teachers.push(req.body) // PUSH vai adicionar um item após o outro no Array
 
-    return res.send(req.body)
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send('Write file error!')
+
+        return res.redirect('/')
+    })
+
+    // return res.send(req.body)
 }
 
 
