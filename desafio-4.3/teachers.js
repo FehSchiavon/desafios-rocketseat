@@ -17,6 +17,13 @@ exports.post = function(req, res) { //req.body e usado no method POST
             return res.send('Please, fill all fields!')
     }
 
+    // Desestruturando o Objeto
+
+
+    req.body.birth = Date.parse(req.body.birth) // Construtors Manuais | Data em milisegundos
+    req.body.created_at = Date.now() // Construtor que pega data atual
+    req.body.id = Number(data.teachers.length + 1) // Construtor para criar ID 
+
     data.teachers.push(req.body) // PUSH vai adicionar um item após o outro no Array
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
