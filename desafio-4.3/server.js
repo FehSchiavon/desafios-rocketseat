@@ -14,7 +14,6 @@ nunjucks.configure('views', {
     autoescape: true,
     express: server,
     noCache: true,
-    watch: true
 })
 
 

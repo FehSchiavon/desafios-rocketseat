@@ -18,13 +18,26 @@ exports.post = function(req, res) { //req.body e usado no method POST
     }
 
     // Desestruturando o Objeto
+    let { avatar_url, birth, name, school, category, plus, password, password2 } = req.body
+    
+    
+    birth = Date.parse(birth) // Construtors Manuais | Data em milisegundos
+    const created_at = Date.now() // Construtor que pega data atual
+    const id = Number(data.teachers.length + 1) // Construtor para criar ID 
 
-
-    req.body.birth = Date.parse(req.body.birth) // Construtors Manuais | Data em milisegundos
-    req.body.created_at = Date.now() // Construtor que pega data atual
-    req.body.id = Number(data.teachers.length + 1) // Construtor para criar ID 
-
-    data.teachers.push(req.body) // PUSH vai adicionar um item após o outro no Array
+    // Organizar a sequencia dos dados
+    data.teachers.push({
+        id,
+        avatar_url,
+        name,
+        birth,
+        created_at,
+        school,
+        category,
+        plus,
+        password,
+        password2
+    }) // PUSH vai adicionar um item após o outro no Array
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send('Write file error!')
