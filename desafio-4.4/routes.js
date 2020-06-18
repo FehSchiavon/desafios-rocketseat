@@ -16,6 +16,6 @@ routes.get('/register', function(req, res) {
 
 routes.post('/register', teachers.post)
 
-routes.get('register/:id', teachers.show)
+routes.get('/register/:id', teachers.show)
 
 module.exports = routes

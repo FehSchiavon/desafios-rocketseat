@@ -3,9 +3,23 @@ const data = require('./data.json')
 
 // Função POST
 
+// Resuminho
+// req.query : ?id=1
+// req.body : dados gerados pelo formulario
+// req.params : /:id
+
 // Show
-exports.show = function(req, res) {
-    
+exports.show = function(req, res) { //req.params server para coletar uma ID e USAR os DADOS dele
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher) { //Encontrar o ID dentro do ARRAY
+        return id == teacher.id
+    })
+
+    if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
+
+    return res.send(foundTeacher) // Dados esta indo em formato JSON
+
 }
 
 
