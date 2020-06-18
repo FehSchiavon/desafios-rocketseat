@@ -18,7 +18,9 @@ exports.show = function(req, res) { //req.params server para coletar uma ID e US
 
     if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
 
-    return res.send(foundTeacher) // Dados esta indo em formato JSON
+    // return res.send(foundTeacher) // Dados esta indo em formato JSON
+    return res.render('teachers/show', { teacher: foundTeacher })
+
 
 }
 
