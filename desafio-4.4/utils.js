@@ -1,7 +1,7 @@
 module.exports = {
     age: function(timestamp) {
-        const today = new Date()
-        const birthDate = new Date(timestamp)
+        const today = new Date() // Puxa a data atual gerada no sistema
+        const birthDate = new Date(timestamp) // Pega valor passado e transforma em data
 
         let age = today.getFullYear() - birthDate.getFullYear()
         const month = today.getMonth() - birthDate.getMonth()
@@ -13,5 +13,15 @@ module.exports = {
         }
 
         return age
+    },
+    graduation: function(timestamp) {
+        const graduation = timestamp.graduation
+
+        if (graduation == medio) {
+            return 'Ensino Médio Completo'
+        } else {
+            return 'Não encontrado'
+        }
+        
     }
 }
