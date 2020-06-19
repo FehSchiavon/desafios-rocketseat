@@ -20,7 +20,9 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
     if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
 
     const teacher = {
-        ...foundTeacher,
+        ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
+        age: age(foundTeacher.birth), // Gera a idade conforme o Data de Nascimentos escolhida
+
     }
 
     console.log(teacher)
