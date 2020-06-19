@@ -1,5 +1,6 @@
 const fs = require('fs') // File System
 const data = require('./data.json')
+const { age } = require('./utils')
 
 // Função POST
 
@@ -9,7 +10,7 @@ const data = require('./data.json')
 // req.params : /:id
 
 // Show
-exports.show = function(req, res) { //req.params server para coletar uma ID e USAR os DADOS dele
+exports.show = function(req, res) { //req.params serve para coletar uma ID e USAR os DADOS dele
     const { id } = req.params
 
     const foundTeacher = data.teachers.find(function(teacher) { //Encontrar o ID dentro do ARRAY
@@ -18,9 +19,14 @@ exports.show = function(req, res) { //req.params server para coletar uma ID e US
 
     if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
 
+    const teacher = {
+        ...foundTeacher,
+    }
+
+    console.log(teacher)
+
     // return res.send(foundTeacher) // Dados esta indo em formato JSON
     return res.render('teachers/show', { teacher: foundTeacher })
-
 
 }
 
@@ -71,5 +77,6 @@ exports.post = function(req, res) { //req.body e usado no method POST
 }
 
 // Update
+
 
 // Delete
