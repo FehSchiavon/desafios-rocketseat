@@ -22,7 +22,8 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
     const teacher = {
         ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
         age: age(foundTeacher.birth), // Gera a idade conforme o Data de Nascimentos escolhida
-
+        plus: foundTeacher.plus.split(","),
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
     }
 
     console.log(teacher)

@@ -16,12 +16,8 @@ module.exports = {
     },
     graduation: function(timestamp) {
         const graduation = timestamp.graduation
-
-        if (graduation == medio) {
-            return 'Ensino Médio Completo'
-        } else {
-            return 'Não encontrado'
-        }
+        
+        console.log(graduation)
         
     }
 }
