@@ -45,6 +45,7 @@
 
                     <div class="level">
                         <select class="school" name="graduation" required>
+                            <option value="{{ teacher.graduation }}" selected>{{ teacher.graduation }}</option>
                             <option value="" disabled selected>Grau de Escolaridade</option>
                             <option value="medio">Ensino Médio Completo</option>
                             <option value="superior">Ensino Superior Completo</option>
@@ -67,13 +68,13 @@
                             <input type="text" placeholder="  {% for plus in teacher.plus %}{{ plus }}{% endfor %}" name="plus" required>
                     </div>
 
-                    <div id="password">
+                    {# <div id="password">
                         <input type="password" placeholder="  Senha" name="password" required>  
                     </div>
 
                     <div id="password">
                         <input type="password" placeholder="  Confirmar senha" name="password2" required>  
-                    </div>
+                    </div> #}
 
                 </div>
 
