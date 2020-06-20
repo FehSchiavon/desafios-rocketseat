@@ -3,6 +3,7 @@
     {
       "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "nickname": "Felipe",
       "name": "Felipe Schiavon",
       "birth": 722476800000,
       "created_at": 1592506797365,
@@ -11,6 +12,17 @@
       "plus": "Developer",
       "password": "sdadsadsa",
       "password2": "dasdsadsa"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/56521973?s=460&u=fdcfb7f2c627adc5acb808a00cb9994210d5d3ba&v=4",
+      "nickname": "Feh",
+      "name": "Felipe Schiavon",
+      "birth": 722476800000,
+      "created_at": 1592656507722,
+      "graduation": "Ensino Superior Completo",
+      "category": "Á distância",
+      "plus": "Developer, Analytics Logistics"
     }
   ]
 }

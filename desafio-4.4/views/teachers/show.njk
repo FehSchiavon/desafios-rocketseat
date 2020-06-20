@@ -1,7 +1,7 @@
 {% extends 'layout.njk' %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="/styles/show.css">
     <link rel="stylesheet" href="/styles/presentation.css">
 {% endblock %}
 
@@ -20,8 +20,8 @@
         </header>
 
         <div class="welcome">
-            <h2>Seja bem vindo a Digital</h2>
-            <h3>Cadastre sua conta agora</h3>
+            <h2>Bem vindo a Digital</h2>
+            <h3>{{ teacher.nickname }}</h3>
         </div>
 
         <form class="form" method="POST" action="/register">
@@ -31,41 +31,30 @@
                 <div class="data">
 
                     <div class="avatar_url">
-                        <p>Avatar URL</p>
-                        <input type="url" placeholder="  {{ teacher.avatar_url }}" name="avatar_url" required>
+                        <img src="{{ teacher.avatar_url }}" alt="{{ teacher.name }}">
                     </div>
 
                     <div id="user">
-                        <input type="text" placeholder="  {{ teacher.name }}" name="name" required>
+                        {# <input type="text" placeholder="  {{ teacher.name }}" name="name" required> #}
+                        <p>{{ teacher.name }}</p>
                     </div>
 
                     <div class="date">
-                        <input type="text" placeholder="  {{ teacher.birth }}" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/>
+                        {# <input type="text" placeholder="  {{ teacher.birth }}" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/> #}
+                        <p>{{ teacher.age }} Anos</p>
                     </div>
 
                     <div class="level">
-                        <select class="school" name="graduation" required>
-                            <option value="{{ teacher.graduation }}" selected>{{ teacher.graduation }}</option>
-                            <option value="" disabled selected>Grau de Escolaridade</option>
-                            <option value="medio">Ensino Médio Completo</option>
-                            <option value="superior">Ensino Superior Completo</option>
-                            <option value="mestrado">Mestrado</option>
-                            <option value="doutorado">Doutorado</option>
-                        </select>
+                        <p>{{ teacher.graduation }}</p>
                     </div>
 
                     <div class="categories">
-                        <p>Tipo de aula</p>
-
-                        <div class="items">
-                            <span><input type="radio" name="category" value="local" checked>Presencial</span>
-                            <span><input type="radio" name="category" value="online">À&nbsp;distância</span>
-                        </div>
-
+                        <p>Tipo de aula: {{ teacher.category }}</p>
                     </div>
 
                     <div class="plus">
-                            <input type="text" placeholder="  {% for plus in teacher.plus %}{{ plus }}{% endfor %}" name="plus" required>
+                            {# <input type="text" placeholder="  {% for plus in teacher.plus %}{{ plus }}{% endfor %}" name="plus" required> #}
+                            <p>{% for plus in teacher.plus %}{{ plus }}{% endfor %}</p>
                     </div>
 
                     {# <div id="password">

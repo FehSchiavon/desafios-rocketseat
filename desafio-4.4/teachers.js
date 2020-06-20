@@ -49,7 +49,7 @@ exports.post = function(req, res) { //req.body e usado no method POST
     }
 
     // Desestruturando o Objeto
-    let { avatar_url, birth, name, school, category, plus, password, password2 } = req.body
+    let { avatar_url, birth, nickname, name, graduation, category, plus, password, password2 } = req.body
     
     
     birth = Date.parse(birth) // Construtors Manuais | Data em milisegundos
@@ -60,14 +60,15 @@ exports.post = function(req, res) { //req.body e usado no method POST
     data.teachers.push({
         id,
         avatar_url,
+        nickname,
         name,
         birth,
         created_at,
-        school,
+        graduation,
         category,
         plus,
-        password,
-        password2
+        // password,
+        // password2
     }) // PUSH vai adicionar um item após o outro no Array
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
