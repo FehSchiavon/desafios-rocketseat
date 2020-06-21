@@ -1,6 +1,6 @@
 const fs = require('fs') // File System
 const data = require('./data.json')
-const { age } = require('./utils')
+const { age, date } = require('./utils')
 
 // Função POST
 
@@ -8,6 +8,7 @@ const { age } = require('./utils')
 // req.query : ?id=1
 // req.body : dados gerados pelo formulario
 // req.params : /:id
+
 
 // Show
 exports.show = function(req, res) { //req.params serve para coletar uma ID e USAR os DADOS dele
@@ -26,7 +27,7 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at) // Formatar data yyyy-mm-dd
     }
 
-    console.log(teacher)
+    // console.log(teacher) // Visualizar dados
 
     // return res.send(foundTeacher) // Dados esta indo em formato JSON
     return res.render('teachers/show', { teacher })
@@ -81,20 +82,21 @@ exports.post = function(req, res) { //req.body e usado no method POST
 }
 
 // Edit
-
 exports.edit = function(req, res) { //req.params do Data.json 
-    const { id } = req.params 
+    const { id } = req.params // Colocar os dados dentro de um Objeto
 
-    const foundTeacher = data.teachers.find(function(instructor) {
+    const foundTeacher = data.teachers.find(function(instructor) { //Encontrar o ID dentro do ARRAY
         return id == instructor.id
     })
 
-    if(!foundTeacher) return res.send('Teacher not found!')
+    if(!foundTeacher) return res.send('Teacher not found!') // Caso ele não encontrar o ID
 
     const teacher = {
-        ...foundTeacher,
-        birth: date(foundTeacher.birth)
+        ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
+        birth: date(foundTeacher.birth) // Transforma os dados 2332321123 em data YYYY-MM-DD
     }
+
+    console.log(teacher)
 
     return res.render('teachers/edit', { teacher })
 

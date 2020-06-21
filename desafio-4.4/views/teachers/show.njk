@@ -28,44 +28,7 @@
 
             <div class="register">
 
-                <div class="data">
-
-                    <div class="avatar_url">
-                        <img src="{{ teacher.avatar_url }}" alt="{{ teacher.name }}">
-                    </div>
-
-                    <div id="user">
-                        {# <input type="text" placeholder="  {{ teacher.name }}" name="name" required> #}
-                        <p>{{ teacher.name }}</p>
-                    </div>
-
-                    <div class="date">
-                        {# <input type="text" placeholder="  {{ teacher.birth }}" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/> #}
-                        <p>{{ teacher.age }} anos</p>
-                    </div>
-
-                    <div class="level">
-                        <p>{{ teacher.graduation }}</p>
-                    </div>
-
-                    <div class="categories">
-                        <p>Tipo de aula: {{ teacher.category }}</p>
-                    </div>
-
-                    <div class="plus">
-                            {# <input type="text" placeholder="  {% for plus in teacher.plus %}{{ plus }}{% endfor %}" name="plus" required> #}
-                            <p>{% for plus in teacher.plus %}{{ plus }}{% endfor %}</p>
-                    </div>
-
-                    {# <div id="password">
-                        <input type="password" placeholder="  Senha" name="password" required>  
-                    </div>
-
-                    <div id="password">
-                        <input type="password" placeholder="  Confirmar senha" name="password2" required>  
-                    </div> #}
-
-                </div>
+                {% include 'teachers/fields.njk'%}
 
                 <button class="button" type="submit">Editar</button>
 
