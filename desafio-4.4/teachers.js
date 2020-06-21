@@ -91,6 +91,11 @@ exports.edit = function(req, res) { //req.params do Data.json
 
     if(!foundTeacher) return res.send('Teacher not found!')
 
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth)
+    }
+
     return res.render('teachers/edit', { teacher })
 
 }
