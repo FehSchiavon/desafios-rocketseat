@@ -1,7 +1,7 @@
-/* REGISTER */
+/* EDIT */
 
 body {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 20% 60% 20%;
     overflow: hidden;
     background-color: #3C46A7;
 }

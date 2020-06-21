@@ -14,12 +14,6 @@ module.exports = {
 
         return age
     },
-    graduation: function(timestamp) {
-        const graduation = timestamp.graduation
-        
-        console.log(graduation)
-        
-    },
     date: function(timestamp) {
         const date = new Date(timestamp)
 
