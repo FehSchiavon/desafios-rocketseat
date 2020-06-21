@@ -96,7 +96,7 @@ exports.edit = function(req, res) { //req.params do Data.json
         birth: date(foundTeacher.birth) // Transforma os dados 2332321123 em data YYYY-MM-DD
     }
 
-    console.log(teacher)
+    // console.log(teacher) // Visualizar dados enviados no terminal
 
     return res.render('teachers/edit', { teacher })
 

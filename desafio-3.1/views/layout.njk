@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        {% block head %}
+            <title>Rocketseat</title>
+        {% endblock %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <div id="header">
+                <a href="/">Home</a>
+                <a href="https://rocketseat.com.br/" target="_blank">Sobre</a>
+                <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
+                <a href="/courses">Conteúdo</a>             
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+            <div id="footer">
+                <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+                <a href="https://www.instagram.com/rocketseat_oficial/" target="_blank">Instagram</a>
+                <a href="https://pt-br.facebook.com/rocketseat/" target="_blank">Facebook</a>
+            </div>
+        </footer>
+
+        <!--MODAL-->
+        <span>
+            <div class="modal-overlay">
+                <div class="modal">
+                    <a class="close-modal">
+                        <i class="material-icons">close</i>
+                    </a>
+                    <div class="modal-content">
+                        <!--CONTENT-->
+                        <iframe src="https://rocketseat.com.br/starter" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>    
+        </span>
+        <script src="script.js"></script>
+    </body>
+</html>
