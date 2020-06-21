@@ -29,7 +29,7 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
     console.log(teacher)
 
     // return res.send(foundTeacher) // Dados esta indo em formato JSON
-    return res.render('teachers/show', { teacher: foundTeacher })
+    return res.render('teachers/show', { teacher })
 
 }
 
@@ -79,6 +79,22 @@ exports.post = function(req, res) { //req.body e usado no method POST
 
     // return res.send(req.body)
 }
+
+// Edit
+
+exports.edit = function(req, res) { //req.params do Data.json 
+    const { id } = req.params 
+
+    const foundTeacher = data.teachers.find(function(instructor) {
+        return id == instructor.id
+    })
+
+    if(!foundTeacher) return res.send('Teacher not found!')
+
+    return res.render('teachers/edit', { teacher })
+
+}
+
 
 // Update
 

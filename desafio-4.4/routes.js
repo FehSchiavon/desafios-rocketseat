@@ -18,4 +18,6 @@ routes.post('/register', teachers.post)
 
 routes.get('/register/:id', teachers.show)
 
+routes.get('/register/:id/edit', teachers.edit)
+
 module.exports = routes
