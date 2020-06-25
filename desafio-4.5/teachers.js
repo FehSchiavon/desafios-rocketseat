@@ -102,8 +102,10 @@ exports.edit = function(req, res) { //req.params do Data.json
 
 }
 
-
 // Update
+exports.put = function(req, res) { // Atualiza os dados do Array
+    
+}
 
 
 // Delete
