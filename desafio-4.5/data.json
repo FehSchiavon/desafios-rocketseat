@@ -2,14 +2,14 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
-      "nickname": "Felipe",
+      "avatar_url": "http://google.com",
+      "nickname": "Feh",
       "name": "Felipe Schiavon",
-      "birth": 722476800000,
+      "birth": 1454976000000,
       "created_at": 1592506797365,
-      "graduation": "superior",
-      "category": "online",
-      "plus": "Developer",
+      "graduation": "Ensino Superior Completo",
+      "category": "À distância",
+      "plus": "Logistics Analytics",
       "password": "sdadsadsa",
       "password2": "dasdsadsa"
     },
