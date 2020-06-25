@@ -1,0 +1,103 @@
+{% extends 'layout.njk' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/presentation.css">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="info">
+
+    </div>
+
+
+    <div class="content">
+        <header>
+            <a href="/register">Cadastro</a>
+            <a href="/">Login</a>
+        </header>
+
+        <div class="welcome">
+            <h2>Seja bem vindo a Digital</h2>
+            <h3>Cadastre sua conta agora</h3>
+        </div>
+
+        <form class="form" method="POST" action="/register">
+
+            <div class="register">
+
+                <div class="data">
+
+                    <div class="avatar_url">
+                        <p>Avatar URL</p>
+                        <input type="url" placeholder="  http://" name="avatar_url" required>
+                    </div>
+
+                    <div id="user">
+                        <input type="text" placeholder="  Apelido" name="nickname" required>
+                    </div>
+
+                    <div id="user">
+                        <input type="text" placeholder="  Nome completo" name="name" required>
+                    </div>
+
+
+                    <div class="date">
+                        <input type="text" placeholder="  Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" name="birth" required/>
+                    </div>
+
+                    <div class="level">
+                        <select class="school" name="graduation" required>
+                            <option value="" disabled selected>Grau de Escolaridade</option>
+                            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                            <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                            <option value="Mestrado">Mestrado</option>
+                            <option value="Doutorado">Doutorado</option>
+                        </select>
+                    </div>
+
+                    <div class="categories">
+                        <p>Tipo de aula</p>
+
+                        <div class="items">
+                            <span><input type="radio" name="Presencial" value="local" checked>Presencial</span>
+                            <span><input type="radio" name="À distância" value="online">À&nbsp;distância</span>
+                        </div>
+
+                    </div>
+
+                    <div class="plus">
+                        <input type="text" placeholder="  Áreas de atuação (separados por vírgula)" name="plus" required>
+                    </div>
+
+                    {# <div id="password">
+                        <input type="password" placeholder="  Senha" name="password" required>  
+                    </div>
+
+                    <div id="password">
+                        <input type="password" placeholder="  Confirmar senha" name="password2" required>  
+                    </div> #}
+
+                </div>
+
+                <button class="button" type="submit">Cadastrar-se</button>
+
+                <div class="support">
+                    <a href="#">Ajuda & Suporte</a>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="info">
+
+    </div>
+
+
+{% endblock %}
