@@ -119,15 +119,17 @@ exports.put = function(req, res) { // Atualiza os dados do Array
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
+
 
     data.teachers[index] = teacher
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
         if(err) return res.send('Write error!')
 
-        return res.redirect(`/register${id}`)
+        return res.redirect(`/register/${id}`)
     })
 }
 
