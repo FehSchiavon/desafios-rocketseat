@@ -24,7 +24,7 @@
             <h3>Sinta-se a vontade em mudar seu dados</h3>
         </div>
 
-        <form class="form" method="POST" action="/register">
+        <form class="form" method="POST" action="/register?_method=PUT">
 
             <div class="register">
 
@@ -99,6 +99,12 @@
 
                 <button class="button" type="submit">Salvar</button>
 
+                <input 
+                    type="hidden"
+                    name="id"
+                    value={{teacher.id}}
+                >
+
                 <div class="support">
                     <a href="#">Ajuda & Suporte</a>
                 </div>
@@ -106,6 +112,7 @@
             </div>
 
         </form>
+
 
     </div>
 

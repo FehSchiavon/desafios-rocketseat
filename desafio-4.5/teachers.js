@@ -104,7 +104,31 @@ exports.edit = function(req, res) { //req.params do Data.json
 
 // Update
 exports.put = function(req, res) { // Atualiza os dados do Array
-    
+    const { id } = req.body // Pega o id da Página
+    let index = 0 // Irá receber a resposta do foundTeacher
+
+    const foundTeacher = data.teachers.find(function(teacher, foundIndex) { // Valida se existe esse index no Array
+        if (id == teacher.id) {
+            index = foundIndex 
+            return true // Caso existir volta o numero do index que é verdadeiro
+        }
+    })
+
+    if(!foundTeacher) return res.send('Teacher not found!') // Agora não encontrando ele avisa que não tem
+
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(req.body.birth)
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
+        if(err) return res.send('Write error!')
+
+        return res.redirect(`/register${id}`)
+    })
 }
 
 
