@@ -105,14 +105,16 @@
                     value={{teacher.id}}
                 >
 
-                <div class="support">
-                    <a href="#">Ajuda & Suporte</a>
-                </div>
-
             </div>
 
         </form>
 
+        <div class="register">
+            <form method="POST" action="/register?_method=DELETE">
+                <input type="hidden" name="id" value={{teacher.id}}>
+                <button class="button-delete" type="submit">Deletar</button>
+            </form>
+        </div>
 
     </div>
 
