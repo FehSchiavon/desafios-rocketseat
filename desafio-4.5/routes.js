@@ -22,4 +22,6 @@ routes.get('/register/:id/edit', teachers.edit)
 
 routes.put('/register', teachers.put)
 
+routes.delete('/register', teachers.delete)
+
 module.exports = routes

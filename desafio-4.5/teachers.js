@@ -119,8 +119,8 @@ exports.put = function(req, res) { // Atualiza os dados do Array
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth),
-        id: Number(req.body.id)
+        birth: Date.parse(req.body.birth), // Transforma em data normal YYYY-MM-DD
+        id: Number(req.body.id) //Transformar STRING em NUMBER
     }
 
 
@@ -135,3 +135,18 @@ exports.put = function(req, res) { // Atualiza os dados do Array
 
 
 // Delete
+exports.delete = function(req, res) {
+    const { id } = req.body
+
+    const filterTeachers = data.teachers.filter(function(teacher) {
+        return teacher.id != id
+    })
+
+    data.teachers = filterTeachers
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
+        if (err) return res.send('Write file error!')
+
+        return res.redirect('/register')
+    })
+}

@@ -148,7 +148,7 @@ body {
     justify-content: center;
 
     color: #fff;
-    background-color: var(--secundary-color);
+    background-color: rgba(1, 227, 1, 0.493);
     font-size: 20px;
     font-weight: bold;
     transition: 500ms;
@@ -157,6 +157,30 @@ body {
 }
 
 .content .register .button:hover {
+    background-color: rgba(1, 227, 1, 0.829);
+    cursor: pointer;
+}
+
+.content .register .button-delete {
+    margin-bottom: 25px;
+    padding: 15px 0px;
+    width: 300px;
+    border-radius: 25px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background-color: var(--secundary-color);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 500ms;
+
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.content .register .button-delete:hover {
     background-color: #F9617D;
     cursor: pointer;
 }
