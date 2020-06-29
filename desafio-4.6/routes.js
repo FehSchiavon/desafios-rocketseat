@@ -13,6 +13,9 @@ routes.get('/login', function(req, res) {
 routes.get('/register', function(req, res) {
     return res.render('teachers/register')
 })
+// LIST
+
+routes.get("/register/list", teachers.list)
 
 // CRUD 
 
@@ -25,9 +28,5 @@ routes.get('/register/:id/edit', teachers.edit)
 routes.put('/register', teachers.put)
 
 routes.delete('/register', teachers.delete)
-
-// LIST
-
-routes.get("/register/list", teachers.list)
 
 module.exports = routes
