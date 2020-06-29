@@ -1,0 +1,51 @@
+{% extends 'layout.njk' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/show.css">
+    <link rel="stylesheet" href="/styles/presentation.css">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="info">
+
+    </div>
+
+
+    <div class="content">
+        <header>
+            <a href="/register">Cadastro</a>
+            <a href="/">Login</a>
+        </header>
+
+        <div class="welcome">
+            <h2>Bem vindo a Digital</h2>
+            <h3>{{ teacher.nickname }}</h3>
+        </div>
+
+        <form class="form" method="POST" action="/register">
+
+            <div class="register">
+
+                {% include 'teachers/fields.njk'%}
+
+                <a class="button" href="/register/{{ teacher.id }}/edit">Editar</a>
+
+                <div class="support">
+                    <a href="#">Ajuda & Suporte</a>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="info">
+
+    </div>
+
+
+{% endblock %}
