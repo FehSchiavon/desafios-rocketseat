@@ -10,6 +10,12 @@ const { age, date } = require('./utils')
 // req.params : /:id
 
 
+// List
+exports.list = function(req, res) {
+    return res.render('teachers/list', { teacher: data.teachers})
+}
+
+
 // Show
 exports.show = function(req, res) { //req.params serve para coletar uma ID e USAR os DADOS dele
     const { id } = req.params
@@ -33,7 +39,6 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
     return res.render('teachers/show', { teacher })
 
 }
-
 
 // Create
 exports.post = function(req, res) { //req.body e usado no method POST
@@ -132,7 +137,6 @@ exports.put = function(req, res) { // Atualiza os dados do Array
         return res.redirect(`/register/${id}`)
     })
 }
-
 
 // Delete
 exports.delete = function(req, res) {
