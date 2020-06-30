@@ -25,13 +25,23 @@
 
         <div class="table-container">
             <table>
-                <thead>
-                    <tr>
+                <thead> {# Cabeçalho #}
+                    <tr> {# Linha do Cabeçalho #}
                         <th>Professores</th>
                         <th>Acompanhamento</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {% for teacher in teachers %}
+                        <td>
+                            <span style="background-image: url({{teacher.avatar_url}})"></span>
+                            {{ teacher.name }}
+                        </td>
+                        <td>{{ teacher.plus }}</td>
+                        <td><a href="/register/{{teacher.id}}">ver</a></td>
+                    {% endfor %}
+                </tbody>
             </table>
         </div>
 

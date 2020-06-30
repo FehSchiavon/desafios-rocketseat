@@ -1,3 +1,14 @@
 {
-  "teachers": []
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://github.com/FehSchiavon",
+      "nickname": "Feh",
+      "name": "Felipe Schiavon",
+      "birth": 722476800000,
+      "created_at": 1593546108065,
+      "graduation": "Ensino Superior Completo",
+      "plus": "Developer, Analytics Logistics"
+    }
+  ]
 }

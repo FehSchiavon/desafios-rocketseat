@@ -12,7 +12,7 @@ const { age, date } = require('./utils')
 
 // List
 exports.list = function(req, res) {
-    return res.render('teachers/list', { teacher: data.teachers})
+    return res.render('teachers/list', { teachers: data.teachers})
 }
 
 
