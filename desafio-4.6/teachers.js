@@ -13,6 +13,18 @@ const { age, date } = require('./utils')
 // List
 exports.list = function(req, res) {
     // Criar separaão de lista
+    const { id } = req.body
+    console.log(id)
+
+    const foundTeacher = data.teachers.plus.find(function(teacher) { //Encontrar o ID dentro do ARRAY
+        return id == teacher.id
+    })
+
+    const teacher = {
+        ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
+    }
+    console.log(teacher)
+
     return res.render('teachers/list', { teachers: data.teachers})
 }
 
