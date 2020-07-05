@@ -13,6 +13,9 @@ const { age, date } = require('./utils')
 // List
 exports.list = function(req, res) {
     // Criar separaão de lista
+    const view = res.params
+    console.log(view)
+
     return res.render('teachers/list', { teachers: data.teachers})
 }
 
