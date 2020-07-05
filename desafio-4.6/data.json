@@ -13,15 +13,22 @@
     {
       "id": 2,
       "avatar_url": "https://images.unsplash.com/photo-1587613864411-969e5288c708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "nickname": "Feh",
+      "name": "Felipe Schiavon",
+      "birth": 722476800000,
+      "created_at": 1593546108065,
+      "graduation": "Ensino Superior Completo",
+      "plus": "Developer, Analytics Logistics"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1587613864411-969e5288c708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "nickname": "Luh",
       "name": "Lucas Schiavon",
       "birth": 722476800000,
       "created_at": 1593546108065,
       "graduation": "Ensino Superior Completo",
-      "plus": [ 
-        "Developer", 
-        "Analytics Logistics"
-      ]
+      "plus": "Developer, Analytics Logistics"
     }
   ]
 }

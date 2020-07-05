@@ -13,10 +13,17 @@ const { age, date } = require('./utils')
 // List
 exports.list = function(req, res) {
     // Criar separaão de lista
-    const view = res.params
-    console.log(view)
+    const listTearchers = data.teachers.map(function(teacher) {
+        const partTeacher = {
+            ...teacher,
+            plus: teacher.plus.split(',') // Devide o Obejto em um Array
+        }
+        return partTeacher
+    })
 
-    return res.render('teachers/list', { teachers: data.teachers})
+    console.log(listTearchers)
+
+    return res.render('teachers/list', { teachers: listTearchers})
 }
 
 
@@ -33,7 +40,8 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
     const teacher = {
         ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
         age: age(foundTeacher.birth), // Gera a idade conforme o Data de Nascimentos escolhida
-        plus: foundTeacher.plus.split(","), // Separa os textos por virgula 
+        // plus: foundTeacher.plus.split(","), // Separa os textos por virgula 
+        plus: foundTeacher.plus,
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at) // Formatar data yyyy-mm-dd
     }
 
