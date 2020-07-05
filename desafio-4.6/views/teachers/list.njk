@@ -34,12 +34,14 @@
                 </thead>
                 <tbody>
                     {% for teacher in teachers %}
-                        <td>
-                            <span style="background-image: url({{teacher.avatar_url}})"></span>
-                            {{ teacher.name }}
-                        </td>
-                        <td>{{ teacher.plus }}</td>
-                        <td><a href="/register/{{teacher.id}}">ver</a></td>
+                        <tr>
+                            <td>
+                                <span style="background-image: url({{teacher.avatar_url}})"></span>
+                                {{ teacher.name }}
+                            </td>
+                            <td>{{ teacher.plus }}</td>
+                            <td><a href="/register/{{teacher.id}}">ver</a></td>
+                        </tr>
                     {% endfor %}
                 </tbody>
             </table>
