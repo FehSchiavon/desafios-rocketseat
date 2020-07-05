@@ -39,7 +39,11 @@
                                 <span style="background-image: url({{teacher.avatar_url}})"></span>
                                 {{ teacher.name }}
                             </td>
-                            <td>{{ teacher.plus }}</td>
+                            <td>
+                                {% for plus in teacher.plus %}
+                                    <span class="list-plus">{{ plus }}</span>
+                                {% endfor %}
+                            </td>
                             <td><a href="/register/{{teacher.id}}">ver</a></td>
                         </tr>
                     {% endfor %}

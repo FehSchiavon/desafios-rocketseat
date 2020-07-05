@@ -13,8 +13,15 @@ const { age, date } = require('./utils')
 // List
 exports.list = function(req, res) {
     // Criar separaão de lista
-    const view = res.params
-    console.log(view)
+    const listTearchers = data.teachers.map(function(teacher) {
+        const partTeacher = {
+            ...teacher,
+            // plus: teacher.plus.split(',')
+        }
+        return partTeacher
+    })
+
+    console.log(listTearchers)
 
     return res.render('teachers/list', { teachers: data.teachers})
 }
