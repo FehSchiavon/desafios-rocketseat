@@ -16,14 +16,14 @@ exports.list = function(req, res) {
     const listTearchers = data.teachers.map(function(teacher) {
         const partTeacher = {
             ...teacher,
-            // plus: teacher.plus.split(',')
+            plus: teacher.plus.split(',') // Devide o Obejto em um Array
         }
         return partTeacher
     })
 
     console.log(listTearchers)
 
-    return res.render('teachers/list', { teachers: data.teachers})
+    return res.render('teachers/list', { teachers: listTearchers})
 }
 
 
