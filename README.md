@@ -26,8 +26,7 @@ The Rocketseat Challenge
 
 ## :interrobang: Motivo
 
-Me self challenge and have fun.
-
+Challenge myself and have fun. In Javascript.
 
 ## :rocket: Tecnologias Utilizadas
 
