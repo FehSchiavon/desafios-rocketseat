@@ -1,0 +1,28 @@
+<div class="data">
+
+    <div class="avatar_url">
+        <img src="{{ teacher.avatar_url }}" alt="{{ teacher.name }}">
+    </div>
+
+    <div id="user">
+        <p>{{ teacher.name }}</p>
+    </div>
+
+    <div class="date">
+        <p>{{ teacher.age }} anos</p>
+    </div>
+
+    <div class="level">
+        <p>{{ teacher.graduation }}</p>
+    </div>
+
+    <div class="categories">
+        <p>Tipo de aula: {{ teacher.category }}</p>
+    </div>
+
+    <div class="plus">
+            {# Corrigir Erro de CSS por causa da mudança do Array #}
+            <p>{% for plus in teacher.plus %}{{ plus }}{% endfor %}</p>
+    </div>
+
+</div>
