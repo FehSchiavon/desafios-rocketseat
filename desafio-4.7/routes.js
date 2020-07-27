@@ -18,11 +18,16 @@ routes.get('/register/:id/edit', teachers.edit)
 routes.put('/register', teachers.put)
 routes.delete('/register', teachers.delete)
 
+
+
 // Students
-routes.post('/register', students.post)
-routes.get('/register/:id', students.show)
-routes.get('/register/:id/edit', students.edit)
-routes.put('/register', students.put)
-routes.delete('/register', students.delete)
+// CRUD
+routes.get('/students/:id', students.index)
+routes.get('/students/:id', students.create)
+routes.get('/students/:id', students.show)
+routes.get('/students/:id/edit', students.edit)
+routes.post('/students', students.post)
+routes.put('/students', students.put)
+routes.delete('/students', students.delete)
 
 module.exports = routes
