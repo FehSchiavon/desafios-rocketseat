@@ -40,6 +40,12 @@ body {
     line-height: 35px;
 }
 
+/* CHANGE SCHOOL */
+
+.content .changeSchool {
+    text-align: center;
+}
+
 /* LIST */
 
 .content .table-container {
