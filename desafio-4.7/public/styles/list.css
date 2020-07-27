@@ -40,6 +40,24 @@ body {
     line-height: 35px;
 }
 
+/* CHANGE SCHOOL */
+
+.content .changeSchool {
+    text-align: center;
+}
+
+.content .changeSchool a {
+    background-color: #fff;
+    color: var(--primary-color);
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.content .changeSchool a + a {
+    margin-left: 40px;
+}
+
 /* LIST */
 
 .content .table-container {

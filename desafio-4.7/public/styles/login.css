@@ -94,9 +94,12 @@ body {
     transition: 500ms;
 
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+
+    text-decoration: none;
 }
 
 .content .register .button:hover {
+    text-decoration: none;
     background-color: #F9617D;
     cursor: pointer;
 }
