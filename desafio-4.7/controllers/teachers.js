@@ -1,6 +1,6 @@
 const fs = require('fs') // File System
-const data = require('./data.json')
-const { age, date } = require('./utils')
+const data = require('../data.json')
+const { age, date } = require('../utils')
 // Função POST
 
 // Resuminho

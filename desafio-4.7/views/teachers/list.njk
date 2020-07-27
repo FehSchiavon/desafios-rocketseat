@@ -3,6 +3,7 @@
 {% block styles %}
     <link rel="stylesheet" href="/styles/list.css">
     <link rel="stylesheet" href="/styles/presentation.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 {% endblock %}
 
 
@@ -16,11 +17,16 @@
     <div class="content">
         <header>
             <a href="/register">Cadastro</a>
-            <a href="/">Login</a>
+            <a href="/login">Login</a>
         </header>
 
+        <div class="changeSchool">
+            <a href="/teachers">Professores</a>
+            <a href="/students">Alunos</a>
+        </div>
+
         <div class="welcome">
-            <h2>Consulte de Professores</h2>
+            <h2>Consulte os Professores</h2>
         </div>
 
         <div class="table-container">
