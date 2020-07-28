@@ -22,8 +22,8 @@ routes.delete('/register', teachers.delete)
 
 // Students
 // CRUD
-routes.get('/students/:id', students.index)
-routes.get('/students/:id', students.create)
+routes.get('/students', students.index)
+routes.get('/students/create', students.create)
 routes.get('/students/:id', students.show)
 routes.get('/students/:id/edit', students.edit)
 routes.post('/students', students.post)
