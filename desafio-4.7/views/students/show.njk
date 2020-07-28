@@ -16,21 +16,21 @@
     <div class="content">
         <header>
             <a href="/register">Cadastro</a>
-            <a href="/">Login</a>
+            <a href="/login">Login</a>
         </header>
 
         <div class="welcome">
             <h2>Bem vindo a Digital</h2>
-            <h3>{{ teacher.nickname }}</h3>
+            <h3>{{ student.nickname }}</h3>
         </div>
 
         <form class="form" method="POST" action="/register">
 
             <div class="register">
 
-                {% include 'teachers/fields.njk'%}
+                {% include 'students/fields.njk'%}
 
-                <a class="button" href="/register/{{ teacher.id }}/edit">Editar</a>
+                <a class="button" href="/student/{{ student.id }}/edit">Editar</a>
 
                 <div class="support">
                     <a href="#">Ajuda & Suporte</a>
