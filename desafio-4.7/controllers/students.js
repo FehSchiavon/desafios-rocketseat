@@ -16,7 +16,7 @@ exports.index = function(req, res) {
 
     console.log(listStudents)
 
-    return res.render('students/list', { students: listStudents})
+    return res.render('students/index', { students: listStudents})
 }
 // Create
 exports.create = function(req, res) {
