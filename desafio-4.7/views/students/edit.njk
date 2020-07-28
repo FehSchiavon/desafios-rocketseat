@@ -16,7 +16,7 @@
     <div class="content">
         <header>
             <a href="/register">Cadastro</a>
-            <a href="/">Login</a>
+            <a href="/login">Login</a>
         </header>
 
         <div class="welcome">
@@ -32,22 +32,22 @@
 
                     <div class="avatar_url">
                         <p>Avatar URL</p>
-                        <input type="url" placeholder="  {{ teacher.avatar_url }}" name="avatar_url" required>
+                        <input type="url" placeholder="  {{ student.avatar_url }}" name="avatar_url" required>
                     </div>
 
                     <div id="user">
-                        <input type="text" placeholder="  {{ teacher.nickname }}" name="nickname" required>
+                        <input type="text" placeholder="  {{ student.nickname }}" name="nickname" required>
                     </div>
 
                     <div id="user">
-                        <input type="text" placeholder="  {{ teacher.name }}" name="name" required>
+                        <input type="text" placeholder="  {{ student.name }}" name="name" required>
                     </div>
 
 
                     <div class="date">
                         <input 
                             type="text" 
-                            placeholder="  {{ teacher.birth }}" 
+                            placeholder="  {{ student.birth }}" 
                             onfocus="(this.type='date')" 
                             onblur="(this.type='text')" 
                             name="birth" 
@@ -57,7 +57,7 @@
 
                     <div class="level">
                         <select class="school" name="graduation" required>
-                            <option value="" disabled selected>{{ teacher.graduation }}</option>
+                            <option value="" disabled selected>{{ student.graduation }}</option>
                             <option value="Ensino Médio Completo">Ensino Médio Completo</option>
                             <option value="Ensino Superior Completo">Ensino Superior Completo</option>
                             <option value="Mestrado">Mestrado</option>
@@ -73,7 +73,7 @@
                                 <input type="radio" 
                                 name="category" 
                                 value="Presencial" 
-                                { if teacher.category == 'Presencial'}
+                                { if student.category == 'Presencial'}
                                 checked
                                 { endif }
                                 >Presencial
@@ -82,7 +82,7 @@
                                 <input type="radio" 
                                     name="category" 
                                     value="À distância" 
-                                    { if teacher.category == 'À distância'}
+                                    { if student.category == 'À distância'}
                                     checked
                                     { endif }
                                 >À&nbsp;distância
@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="plus">
-                        <input type="text" placeholder="  {{ teacher.plus }}" name="plus" required>
+                        <input type="text" placeholder="  {{ student.plus }}" name="plus" required>
                     </div>
 
                 </div>
@@ -102,7 +102,7 @@
                 <input 
                     type="hidden"
                     name="id"
-                    value={{teacher.id}}
+                    value={{student.id}}
                 >
 
             </div>
@@ -111,7 +111,7 @@
 
         <div class="register">
             <form method="POST" action="/register?_method=DELETE">
-                <input type="hidden" name="id" value={{teacher.id}}>
+                <input type="hidden" name="id" value={{student.id}}>
                 <button class="button-delete" type="submit">Deletar</button>
             </form>
         </div>
