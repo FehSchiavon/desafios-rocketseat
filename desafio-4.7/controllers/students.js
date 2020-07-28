@@ -6,7 +6,7 @@ const { age, date } = require('../utils')
 // Index
 exports.index = function(req, res) {
     // Criar separação de lista
-    const listTearchers = data.students.map(function(student) {
+    const listStudents = data.students.map(function(student) {
         const partStudent = {
             ...student,
             plus: student.plus.split(',') // Devide o Obejto em um Array
@@ -14,9 +14,9 @@ exports.index = function(req, res) {
         return partStudent
     })
 
-    console.log(listTearchers)
+    console.log(listStudents)
 
-    return res.render('students/list', { students: listTearchers})
+    return res.render('students/list', { students: listStudents})
 }
 // Create
 exports.create = function(req, res) {
@@ -75,7 +75,7 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
         return id == student.id
     })
 
-    if(!foundStudent) return res.send('Instructor not found!') // Caso ele não encontrar o ID
+    if(!foundStudent) return res.send('Student not found!') // Caso ele não encontrar o ID
 
     const student = {
         ...foundStudent, // Manda todos os dados do Array que o formulario gerou
@@ -145,11 +145,11 @@ exports.put = function(req, res) { // Atualiza os dados do Array
 exports.delete = function(req, res) {
     const { id } = req.body
 
-    const filterstudents = data.students.filter(function(student) {
+    const filterStudents = data.students.filter(function(student) {
         return student.id != id
     })
 
-    data.students = filterstudents
+    data.students = filterStudents
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
         if (err) return res.send('Write file error!')
