@@ -91,7 +91,8 @@ th {
 
 /* Acompanhamentos Custumizado */
 
-.list-plus {
+.list-plus, 
+.table-container > a {
     padding: 8px 16px;
     background-color: #fff;
     border-radius: 16px;
@@ -103,6 +104,11 @@ th {
     text-transform: uppercase;
     font-size: 12px;
 }
+
+.table-container > a {
+    text-decoration: none;
+}
+
 /* ------ ------ ------ ------ */
 
 tbody tr:last-child td {
