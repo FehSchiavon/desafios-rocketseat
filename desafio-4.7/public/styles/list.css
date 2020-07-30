@@ -62,7 +62,7 @@ body {
 
 .content .table-container {
     display: block;
-    justify-content: center;
+    text-align: -webkit-center;
 }
 
 .table-container {

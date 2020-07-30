@@ -9,6 +9,16 @@
       "created_at": 1593546108065,
       "graduation": "Ensino Superior Completo",
       "plus": "Developer, Analytics Logistics"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "nickname": "Gabriel",
+      "name": "Gabriel Silva",
+      "birth": -2147731200000,
+      "created_at": 1596151149261,
+      "graduation": "Mestrado",
+      "plus": "Logistics Analytics"
     }
   ],
   "teachers": [
@@ -40,6 +50,16 @@
       "birth": 722476800000,
       "created_at": 1593546108065,
       "graduation": "Ensino Superior Completo",
+      "plus": "Developer, Analytics Logistics"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "nickname": "João",
+      "name": "João Pedro",
+      "birth": 943315200000,
+      "created_at": 1596150929497,
+      "graduation": "Ensino Médio Completo",
       "plus": "Developer, Analytics Logistics"
     }
   ]
