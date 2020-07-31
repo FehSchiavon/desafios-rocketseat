@@ -41,6 +41,16 @@
       "created_at": 1596150929497,
       "graduation": "Ensino Médio Completo",
       "plus": "Developer, Analytics Logistics"
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "nickname": "Juiana",
+      "name": "Juliana Arvore",
+      "birth": 661737600000,
+      "created_at": 1596188553102,
+      "graduation": "Doutorado",
+      "plus": "Direitos Humanos, Cafe"
     }
   ]
 }
