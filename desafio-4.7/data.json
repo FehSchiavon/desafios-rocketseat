@@ -23,16 +23,6 @@
       "plus": "Developer, Analytics Logistics"
     },
     {
-      "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1587613864411-969e5288c708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "nickname": "Feh",
-      "name": "Felipe Schiavon",
-      "birth": 722476800000,
-      "created_at": 1593546108065,
-      "graduation": "Ensino Superior Completo",
-      "plus": "Developer, Analytics Logistics"
-    },
-    {
       "id": 3,
       "avatar_url": "https://images.unsplash.com/photo-1587613864411-969e5288c708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "nickname": "Luh",
@@ -40,6 +30,16 @@
       "birth": 722476800000,
       "created_at": 1593546108065,
       "graduation": "Ensino Superior Completo",
+      "plus": "Developer, Analytics Logistics"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "nickname": "João",
+      "name": "João Pedro",
+      "birth": 943315200000,
+      "created_at": 1596150929497,
+      "graduation": "Ensino Médio Completo",
       "plus": "Developer, Analytics Logistics"
     }
   ]

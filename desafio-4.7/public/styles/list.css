@@ -61,8 +61,8 @@ body {
 /* LIST */
 
 .content .table-container {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: -webkit-center;
 }
 
 .table-container {
@@ -90,8 +90,13 @@ th {
 }
 
 /* Acompanhamentos Custumizado */
+.table-container > a {
+    text-decoration: none;
+    margin-bottom: 16px;
+}
 
-.list-plus {
+.list-plus,
+.table-container > a {
     padding: 8px 16px;
     background-color: #fff;
     border-radius: 16px;
@@ -104,23 +109,7 @@ th {
     font-size: 12px;
 }
 
-.table-container-new {
-    /* width: 50%; */
-    padding: 0px 90px;
-    box-sizing: border-box;
-}
-
-.table-container-new > a {
-    padding: 8px 16px;
-    background-color: #fff;
-    border-radius: 16px;
-    color: #777;
-    display: inline-block;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12px;
-    text-decoration: none;
-}
+/* New Create Button */
 
 /* ------ ------ ------ ------ */
 
