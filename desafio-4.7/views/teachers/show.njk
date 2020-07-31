@@ -25,13 +25,13 @@
             <h3>{{ teacher.nickname }}</h3>
         </div>
 
-        <form class="form" method="POST" action="/register">
+        <form class="form" method="POST" action="/teachers">
 
             <div class="register">
 
                 {% include 'teachers/fields.njk'%}
 
-                <a class="button" href="/register/{{ teacher.id }}/edit">Editar</a>
+                <a class="button" href="/teachers/{{ teacher.id }}/edit">Editar</a>
 
                 <div class="support">
                     <a href="#">Ajuda & Suporte</a>
