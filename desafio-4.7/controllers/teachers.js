@@ -22,7 +22,7 @@ exports.index = function(req, res) {
 
     console.log(listTearchers)
 
-    return res.render('teachers/list', { teachers: listTearchers})
+    return res.render('teachers/index', { teachers: listTearchers})
 }
 // Create
 exports.create = function(req, res) {
@@ -144,7 +144,7 @@ exports.put = function(req, res) { // Atualiza os dados do Array
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
         if(err) return res.send('Write error!')
 
-        return res.redirect(`/register/${id}`)
+        return res.redirect(`/teachers/${id}`)
     })
 }
 // Delete
@@ -160,6 +160,6 @@ exports.delete = function(req, res) {
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
         if (err) return res.send('Write file error!')
 
-        return res.redirect('/register')
+        return res.redirect('/teachers')
     })
 }
