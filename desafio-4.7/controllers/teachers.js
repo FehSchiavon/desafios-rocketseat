@@ -8,16 +8,9 @@ const { age, date } = require('../utils')
 // req.body : dados gerados pelo formulario
 // req.params : /:id
 
-// Index Login
-exports.indexLogin = function(req, res) {
-    return res.render('teachers/login')
-}
-// Index Register
-exports.indexRegister = function(req, res) {
-    return res.render('teachers/register')
-}
-// List
-exports.list = function(req, res) {
+
+// Index
+exports.index = function(req, res) {
     // Criar separação de lista
     const listTearchers = data.teachers.map(function(teacher) {
         const partTeacher = {
@@ -31,31 +24,11 @@ exports.list = function(req, res) {
 
     return res.render('teachers/list', { teachers: listTearchers})
 }
-// Show
-exports.show = function(req, res) { //req.params serve para coletar uma ID e USAR os DADOS dele
-    const { id } = req.params
-
-    const foundTeacher = data.teachers.find(function(teacher) { //Encontrar o ID dentro do ARRAY
-        return id == teacher.id
-    })
-
-    if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
-
-    const teacher = {
-        ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
-        age: age(foundTeacher.birth), // Gera a idade conforme o Data de Nascimentos escolhida
-        // plus: foundTeacher.plus.split(","), // Separa os textos por virgula 
-        plus: foundTeacher.plus,
-        created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at) // Formatar data yyyy-mm-dd
-    }
-
-    // console.log(teacher) // Visualizar dados
-
-    // return res.send(foundTeacher) // Dados esta indo em formato JSON
-    return res.render('teachers/show', { teacher })
-
-}
 // Create
+exports.create = function(req, res) {
+    return res.render('teachers/create')
+}
+// Post
 exports.post = function(req, res) { //req.body e usado no method POST
 
     const keys = Object.keys(req.body) // Object é Contrutor | E o .keys transforma em uma array, mas somente dos Objectos
@@ -99,6 +72,30 @@ exports.post = function(req, res) { //req.body e usado no method POST
     })
 
     // return res.send(req.body)
+}
+// Show
+exports.show = function(req, res) { //req.params serve para coletar uma ID e USAR os DADOS dele
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher) { //Encontrar o ID dentro do ARRAY
+        return id == teacher.id
+    })
+
+    if(!foundTeacher) return res.send('Instructor not found!') // Caso ele não encontrar o ID
+
+    const teacher = {
+        ...foundTeacher, // Manda todos os dados do Array que o formulario gerou
+        age: age(foundTeacher.birth), // Gera a idade conforme o Data de Nascimentos escolhida
+        // plus: foundTeacher.plus.split(","), // Separa os textos por virgula 
+        plus: foundTeacher.plus,
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at) // Formatar data yyyy-mm-dd
+    }
+
+    // console.log(teacher) // Visualizar dados
+
+    // return res.send(foundTeacher) // Dados esta indo em formato JSON
+    return res.render('teachers/show', { teacher })
+
 }
 // Edit
 exports.edit = function(req, res) { //req.params do Data.json 
