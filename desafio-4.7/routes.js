@@ -2,13 +2,13 @@ const express = require('express')
 const routes = express.Router()
 const teachers = require('./controllers/teachers')
 const students = require('./controllers/students')
+const home = require('./controllers/home')
 
 routes.get('/', function(req, res) {
-    return res.redirect('/login')
+    return res.redirect('/home')
 })
 
-routes.get('/login', teachers.indexLogin)
-routes.get('/register', teachers.indexRegister)
+routes.get('/home', home.index)
 
 // Teachers
 // CRUD 
@@ -19,8 +19,6 @@ routes.get('/teachers/:id/edit', teachers.edit)
 routes.post('/teachers', teachers.post)
 routes.put('/teachers', teachers.put)
 routes.delete('/teachers', teachers.delete)
-
-
 
 // Students
 // CRUD
