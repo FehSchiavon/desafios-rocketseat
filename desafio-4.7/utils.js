@@ -27,9 +27,9 @@ module.exports = {
         let grade = timestamp
         // console.log(grade) // Entrada do dado
 
-        if (grade == '1EF') {
+        if (grade == '5EF') {
             grade = '1° Ano do Ensino Fundamental'
-        } 
+        } else if (grade == '6EF')
         // console.log(grade) // Saida do dado
         return grade
     }
