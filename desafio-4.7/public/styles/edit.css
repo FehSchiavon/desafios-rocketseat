@@ -122,6 +122,10 @@ body {
 }
 
 .content .plus {
+    /* margin-top: 10px; */
+}
+
+.content .hours {
     margin-top: 10px;
 }
 

@@ -22,5 +22,15 @@ module.exports = {
         const day = `0${date.getUTCDate()}`.slice(-2)
 
         return `${day}-${month}-${year}`
+    },
+    grade: function(timestamp) {
+        let grade = timestamp
+        // console.log(grade) // Entrada do dado
+
+        if (grade == '5EF') {
+            grade = '1° Ano do Ensino Fundamental'
+        } else if (grade == '6EF')
+        // console.log(grade) // Saida do dado
+        return grade
     }
 }

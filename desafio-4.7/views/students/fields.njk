@@ -12,16 +12,19 @@
         <p>{{ student.age }} anos</p>
     </div>
 
-    <div class="level">
-        <p>{{ student.graduation }}</p>
+    <div class="email">
+        <p>{{ student.email }} anos</p>
     </div>
 
-    <div class="categories">
-        <p>Tipo de aula: {{ student.category }}</p>
+    <div class="level">
+        <p>{{ student.grade }}</p>
+    </div>
+
+    <div class="hours">
+        <p>{{ student.hours }} Horas Semanais</p>
     </div>
 
     <div class="plus">
-            {# Corrigir Erro de CSS por causa da mudança do Array #}
             <p>{% for plus in student.plus %}{{ plus }}{% endfor %}</p>
     </div>
 
