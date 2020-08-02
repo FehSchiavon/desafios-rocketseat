@@ -25,11 +25,12 @@ module.exports = {
     },
     grade: function(timestamp) {
         let grade = timestamp
-        console.log(timestamp)
-        if ('1EF' == grade) {
+        // console.log(grade) // Entrada do dado
+
+        if (grade == '1EF') {
             grade = '1° Ano do Ensino Fundamental'
-        } else if ('2EF' == grade) {
-            grade = '2° Ano do Ensino Fundamental'
         } 
+        // console.log(grade) // Saida do dado
+        return grade
     }
 }

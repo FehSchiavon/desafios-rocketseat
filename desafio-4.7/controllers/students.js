@@ -1,6 +1,6 @@
 const fs = require('fs') // File System
 const data = require('../data.json')
-const { age, date } = require('../utils')
+const { age, date, grade } = require('../utils')
 
 
 // Index
@@ -37,7 +37,7 @@ exports.post = function(req, res) { //req.body e usado no method POST
     }
 
     // Desestruturando o Objeto
-    let { avatar_url, birth, name, email, graduation, hours, plus } = req.body
+    let { avatar_url, birth, name, email, grade, hours, plus } = req.body
     
     
     birth = Date.parse(birth) // Construtors Manuais | Data em milisegundos
@@ -52,7 +52,7 @@ exports.post = function(req, res) { //req.body e usado no method POST
         email,
         birth,
         created_at,
-        graduation,
+        grade,
         hours,
         plus,
         // password,
@@ -81,7 +81,8 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
         ...foundStudent, // Manda todos os dados do Array que o formulario gerou
         age: age(foundStudent.birth), // Gera a idade conforme o Data de Nascimentos escolhida
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at), // Formatar data yyyy-mm-dd
-        plus: foundStudent.plus,
+        plus: foundStudent.plus, // Separar por virgula Adicionais do aluno
+        grade: grade(foundStudent.grade)
     }
 
     // console.log(student) // Visualizar dados
