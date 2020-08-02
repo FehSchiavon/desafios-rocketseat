@@ -36,13 +36,12 @@
                     </div>
 
                     <div id="user">
-                        <input type="text" placeholder="  {{ student.nickname }}" name="nickname" required>
-                    </div>
-
-                    <div id="user">
                         <input type="text" placeholder="  {{ student.name }}" name="name" required>
                     </div>
 
+                    <div id="email">
+                        <input type="text" placeholder="  {{ student.email }}" name="email" required>
+                    </div>
 
                     <div class="date">
                         <input 
@@ -65,30 +64,8 @@
                         </select>
                     </div>
 
-                    <div class="categories">
-                        <p>Tipo de aula</p>
-
-                        <div class="items">
-                            <span>
-                                <input type="radio" 
-                                name="category" 
-                                value="Presencial" 
-                                { if student.category == 'Presencial'}
-                                checked
-                                { endif }
-                                >Presencial
-                            </span>
-                            <span>
-                                <input type="radio" 
-                                    name="category" 
-                                    value="À distância" 
-                                    { if student.category == 'À distância'}
-                                    checked
-                                    { endif }
-                                >À&nbsp;distância
-                            </span>
-                        </div>
-
+                    <div class="hours">
+                        <input type="number" placeholder="  {{ student.hours }} Horas Semanais" name="hours" required>
                     </div>
 
                     <div class="plus">
