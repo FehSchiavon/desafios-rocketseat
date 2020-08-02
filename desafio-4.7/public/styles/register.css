@@ -79,6 +79,10 @@ body {
     font-size: 15px;
 }
 
+.content .hours {
+    margin-top: 10px;
+}
+
 .content .categories {
     width: 300px;
     height: auto;
