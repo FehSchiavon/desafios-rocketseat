@@ -28,8 +28,22 @@ module.exports = {
         // console.log(grade) // Entrada do dado
 
         if (grade == '5EF') {
-            grade = '1° Ano do Ensino Fundamental'
-        } else if (grade == '6EF')
+            grade = '5° Ano do Ensino Fundamental'
+        } else if (grade == '6EF') {
+            grade = '6° Ano do Ensino Fundamental'
+        } else if (grade == '7EF') {
+            grade = '7° Ano do Ensino Fundamental'
+        } else if (grade == '8EF') {
+            grade = '8° Ano do Ensino Fundamental'
+        } else if (grade == '9EF') {
+            grade = '9° Ano do Ensino Fundamental'
+        } else if (grade == '1EM') {
+            grade = '1° Ano do Ensino Médio'
+        } else if (grade == '2EM') {
+            grade = '2° Ano do Ensino Médio'
+        } else if (grade == '3EM') {
+            grade = '3° Ano do Ensino Médio'
+        }
         // console.log(grade) // Saida do dado
         return grade
     }
