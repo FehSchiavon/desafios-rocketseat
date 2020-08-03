@@ -82,7 +82,7 @@ exports.show = function(req, res) { //req.params serve para coletar uma ID e USA
         age: age(foundStudent.birth), // Gera a idade conforme o Data de Nascimentos escolhida
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at), // Formatar data yyyy-mm-dd
         plus: foundStudent.plus, // Separar por virgula Adicionais do aluno
-        grade: grade(foundStudent.grade)
+        grade: grade(foundStudent.grade), // Convertendo os dados 
     }
 
     // console.log(student) // Visualizar dados
