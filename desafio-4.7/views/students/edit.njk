@@ -57,11 +57,15 @@
 
                     <div class="level">
                         <select class="school" name="graduation" required>
-                            <option value="" disabled selected>{{ student.graduation }}</option>
-                            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
-                            <option value="Ensino Superior Completo">Ensino Superior Completo</option>
-                            <option value="Mestrado">Mestrado</option>
-                            <option value="Doutorado">Doutorado</option>
+                            <option value="" disabled selected>{{ student.grade }}</option>
+                            <option value="5EF">5° Ano do Ensino Fundamental</option>
+                            <option value="6EF">6° Ano do Ensino Fundamental</option>
+                            <option value="7EF">7° Ano do Ensino Fundamental</option>
+                            <option value="8EF">8° Ano do Ensino Fundamental</option>
+                            <option value="9EF">9° Ano do Ensino Fundamental</option>
+                            <option value="1EM">1° Ano do Ensino Médio</option>
+                            <option value="2EM">2° Ano do Ensino Médio</option>
+                            <option value="3EM">3° Ano do Ensino Médio</option>
                         </select>
                     </div>
 
@@ -88,7 +92,7 @@
         </form>
 
         <div class="register">
-            <form method="POST" action="/students?_method=DELETE">
+            <form id="form-delete" method="POST" action="/students?_method=DELETE">
                 <input type="hidden" name="id" value={{student.id}}>
                 <button class="button-delete" type="submit">Deletar</button>
             </form>
@@ -96,6 +100,8 @@
 
     </div>
 
+    {# Validação de Dados #}
+    {% include 'confirm.njk'%}
 
     <div class="info">
 
