@@ -32,7 +32,8 @@
                 <thead> {# Cabeçalho #}
                     <tr> {# Linha do Cabeçalho #}
                         <th>Alunos</th>
-                        <th>Acompanhamento</th>
+                        <th>E-mail</th>
+                        <th>Ano Escolar</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
@@ -44,9 +45,10 @@
                                 {{ student.name }}
                             </td>
                             <td>
-                                {% for plus in student.plus %}
-                                    <span class="list-plus">{{ plus }}</span>
-                                {% endfor %}
+                                    <span class="list-plus">{{ student.email }}</span>
+                            </td>
+                            <td>
+                                    <span class="list-plus">{{ student.grade }}</span>
                             </td>
                             <td><a href="/students/{{student.id}}">ver</a></td>
                         </tr>

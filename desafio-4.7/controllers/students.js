@@ -9,7 +9,8 @@ exports.index = function(req, res) {
     const listStudents = data.students.map(function(student) {
         const partStudent = {
             ...student,
-            plus: student.plus.split(',') // Devide o Obejto em um Array
+            plus: student.plus.split(','), // Devide o Obejto em um Array
+            grade: grade(student.grade)
         }
         return partStudent
     })

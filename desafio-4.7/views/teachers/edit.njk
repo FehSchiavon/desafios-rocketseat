@@ -3,6 +3,7 @@
 {% block styles %}
     <link rel="stylesheet" href="./styles/edit.css">
     <link rel="stylesheet" href="./styles/presentation.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 {% endblock %}
 
 
@@ -15,8 +16,8 @@
 
     <div class="content">
         <header>
-            <a href="/register">Cadastro</a>
-            <a href="/">Login</a>
+            <a href="/teachers">Cadastro</a>
+            <a href="/home">Login</a>
         </header>
 
         <div class="welcome">
@@ -110,7 +111,7 @@
         </form>
 
         <div class="register">
-            <form method="POST" action="/teachers?_method=DELETE">
+            <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
                 <input type="hidden" name="id" value={{teacher.id}}>
                 <button class="button-delete" type="submit">Deletar</button>
             </form>
@@ -118,6 +119,8 @@
 
     </div>
 
+    {# Validação de Dados #}
+    {% include 'confirm.njk'%}
 
     <div class="info">
 
