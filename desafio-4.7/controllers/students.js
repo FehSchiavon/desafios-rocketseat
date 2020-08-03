@@ -103,7 +103,8 @@ exports.edit = function(req, res) { //req.params do Data.json
 
     const student = {
         ...foundStudent, // Manda todos os dados do Array que o formulario gerou
-        birth: date(foundStudent.birth) // Transforma os dados 2332321123 em data YYYY-MM-DD
+        birth: date(foundStudent.birth), // Transforma os dados 2332321123 em data YYYY-MM-DD
+        grade: grade(foundStudent.grade)
     }
 
     // console.log(student) // Visualizar dados enviados no terminal
