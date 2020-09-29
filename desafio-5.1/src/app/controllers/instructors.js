@@ -1,24 +1,16 @@
-const fs = require('fs')
-const data = require('../../../data.json')
-const { age, date } = require('../../../utils')
+const { age, date } = require('../../lib/utils')
 
-// Index
 exports.index = function(req, res) {
     return res.render('instructors/index', { instructors: data.instructors })
 }
-// Create
 exports.create = function(req, res) {
     return res.render('instructors/create')
 }
-// Post
 exports.post = function(req, res) {
-    // req.query
-    // req.body
 
     const keys = Object.keys(req.body)
 
     for (key of keys) {
-        // req.body.avartar_url é igual req.body[key]
         if (req.body[key] == "") {
             return res.send('Please, fill all fields')
         }
@@ -47,9 +39,7 @@ exports.post = function(req, res) {
         return res.redirect('/instructors')
     })
 
-    // return res.send(req.body)
 }
-// Show
 exports.show = function(req, res) {
     // req.params
     const { id } = req.params
@@ -69,7 +59,6 @@ exports.show = function(req, res) {
 
     return res.render('instructors/show', { instructor })
 }
-// Edit
 exports.edit = function(req, res) {
     // req.params
     const { id } = req.params
@@ -87,7 +76,6 @@ exports.edit = function(req, res) {
 
     return res.render('instructors/edit', { instructor })
 }
-// Put
 exports.put = function(req, res) {
     // req.params
     const { id } = req.body
@@ -117,7 +105,6 @@ exports.put = function(req, res) {
         return res.redirect(`/instructors/${id}`)
     })
 }
-// Delete
 exports.delete = function(req, res) {
     const { id } = req.body
 
