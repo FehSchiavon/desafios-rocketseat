@@ -1,5 +1,22 @@
 const { age, date } = require('../../lib/utils')
 
+module.exports = {
+    index(req, res) {
+        return res.render('instructors/index', { instructors: data.instructors })
+    },
+    create(req, res) {
+        return res.render('instructors/create')
+    },
+    post(req, res) {
+
+    },
+    show(req, res) {},
+    edit(req, res) {},
+    put(req, res) {},
+    delete(req, res) {},
+}
+
+
 exports.index = function(req, res) {
     return res.render('instructors/index', { instructors: data.instructors })
 }
@@ -17,27 +34,9 @@ exports.post = function(req, res) {
     }
     
     let { avatar_url, birth, name, services, gender } = req.body
+
+    return
     
-    birth = Date.parse(birth) // Corrigido!
-    const created_at = Date.now()
-    const id = Number(data.instructors.length + 1)
-
-
-    data.instructors.push({
-        id,
-        avatar_url,
-        name,
-        birth,
-        gender,
-        services,
-        created_at
-    })
-
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-        if (err) return res.send('Write file error!') 
-
-        return res.redirect('/instructors')
-    })
 
 }
 exports.show = function(req, res) {
