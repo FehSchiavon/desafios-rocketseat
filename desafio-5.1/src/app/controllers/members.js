@@ -4,58 +4,27 @@ module.exports = {
     index(req, res) {
         return res.render('members/index')
     },
-    create(req, res) {},
-    post(req, res) {},
+    create(req, res) {
+        return res.render('members/create')
+    },
+    post(req, res) {
+        const keys = Object.keys(req.body)
+
+        for (key of keys) {
+            if (req.body[key] == "") {
+                return res.send('Please, fill all fields')
+            }
+        }
+
+        return
+    },
     show(req, res) {},
     edit(req, res) {},
     put(req, res) {},
     delete(req, res) {}
 }
 
-// Index
-exports.index = function(req, res) {
-    return res.render('members/index', { members: data.members })
-}
-// Create
-exports.create = function(req, res) {
-    return res.render('members/create')
-}
-// Post
-exports.post = function(req, res) {
-    // req.query
-    // req.body
 
-    const keys = Object.keys(req.body)
-
-    for (key of keys) {
-        // req.body.avartar_url é igual req.body[key]
-        if (req.body[key] == "") {
-            return res.send('Please, fill all fields')
-        }
-    }
-    
-    birth = Date.parse(req.body.birth) // Corrigido!
-    const id = 1
-    const lastMember = data.members[data.members.length -1]
-    
-    if (lastMember) {
-       id = lastMember + 1 
-    }
-
-    data.members.push({
-        id,
-        ...req.body,
-        birth
-    })
-
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-        if (err) return res.send('Write file error!') 
-
-        return res.redirect('/members')
-    })
-
-    // return res.send(req.body)
-}
 // Show
 exports.show = function(req, res) {
     // req.params
