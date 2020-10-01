@@ -1,6 +1,4 @@
-const fs = require('fs')
-const data = require('../data.json')
-const { date } = require('../utils')
+const { date } = require('../../lib/utils')
 
 // Index
 exports.index = function(req, res) {
