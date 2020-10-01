@@ -18,98 +18,26 @@ module.exports = {
 
         return
     },
-    show(req, res) {},
-    edit(req, res) {},
-    put(req, res) {},
+    show(req, res) {
+        return
+    },
+    edit(req, res) {
+        return
+    },
+    put(req, res) {
+        const keys = Object.keys(req.body)
+
+        for (key of keys) {
+            if (req.body[key] == "") {
+                return res.send('Please, fill all fields')
+            }
+        }
+
+        return
+    },
     delete(req, res) {}
 }
 
-
-// Show
-exports.show = function(req, res) {
-    // req.params
-    const { id } = req.params
-
-    const foundMember = data.members.find(function(member) {
-        return  id == member.id
-    })
-
-    const converterBlood = data.members.find(function(member) {
-        if ('A1' == member.blood) {
-            member.blood = 'A+'
-        } else if ('A0' == member.blood) {
-            member.blood = 'A-'
-        } else if ('B1' == member.blood) {
-            member.blood = 'B+'
-        } else if ('B2' == member.blood) {
-            member.blood = 'B-'
-        } else if ('AB1' == member.blood) {
-            member.blood = 'AB+'
-        } else if ('O1' == member.blood) {
-            member.blood = 'O+'
-        } else if ('O0' == member.blood) {
-            member.blood = 'O-'
-        } 
-    })
-
-    if(!foundMember) return res.send('Member not found!')
-
-    const member = {
-        ...foundMember,
-        birth: date(foundMember.birth).birthDay
-    }
-    console.log(member)
-
-    return res.render('members/show', { member })
-}
-// Edit
-exports.edit = function(req, res) {
-    // req.params
-    const { id } = req.params
-
-    const foundMember = data.members.find(function(member) {
-        return  id == member.id
-    })
-
-    if(!foundMember) return res.send('Member not found!')
-
-    const member = {
-        ...foundMember,
-        birth: date(foundMember.birth).iso
-    }
-
-    return res.render('members/edit', { member })
-}
-// Put
-exports.put = function(req, res) {
-    // req.params
-    const { id } = req.body
-    let index = 0
-
-    const foundMember = data.members.find(function(member, foundIndex) {
-        if (id == member.id) {
-            index = foundIndex
-            return true
-        }
-    })
-
-    if(!foundMember) return res.send('Member not found!')
-
-    const member = {
-        ...foundMember,
-        ...req.body,
-        birth: Date.parse(req.body.birth),
-        id: Number(req.body.id)
-    }
-
-    data.members[index] = member
-
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
-        if(err) return res.send('Write error!')
-
-        return res.redirect(`/members/${id}`)
-    })
-}
 // Delete
 exports.delete = function(req, res) {
     const { id } = req.body
