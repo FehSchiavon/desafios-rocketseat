@@ -1,5 +1,17 @@
 const { date } = require('../../lib/utils')
 
+module.exports = {
+    index(req, res) {
+        return res.render('members/index')
+    },
+    create(req, res) {},
+    post(req, res) {},
+    show(req, res) {},
+    edit(req, res) {},
+    put(req, res) {},
+    delete(req, res) {}
+}
+
 // Index
 exports.index = function(req, res) {
     return res.render('members/index', { members: data.members })
