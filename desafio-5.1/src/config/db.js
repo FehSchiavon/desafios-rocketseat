@@ -19,3 +19,4 @@ CREATE TABLE my_teacher (
   created_at TIMESTAMP NOT NULL
 );
 */
+
