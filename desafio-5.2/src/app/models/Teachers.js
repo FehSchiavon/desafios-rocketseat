@@ -41,6 +41,16 @@ module.exports = {
         })
     },
     find(id, callback) {
+        db.query(`
+            SELECT *
+            FROM my_teacher
+            WHERE id = $1`, [id], function(err, results) {
+                if(err) throw `Database Error! ${err}`
+                callback(results.rows[0])
+            }
+        )
+    },
+    update(data, callback) {
         
     }
 }
