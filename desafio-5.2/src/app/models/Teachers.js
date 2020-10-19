@@ -61,7 +61,20 @@ module.exports = {
             subjects_taught=($6)
             WHERE id = ($7)
         `
+        const values = [
+            data.avatar_url,
+            data.name,
+            data.birth_date,
+            data.education_level,
+            data.class_type,
+            data.subjects_taught,
+            data.id
+        ]
 
-        
-    }
+        db.query(query, values, function(err, results) {
+            if(err) throw `Database Error! ${err}`
+            callback()
+        }) 
+    },
+    
 }
