@@ -1,11 +1,14 @@
-const { date } = require('../../lib/utils')
+const { age, date } = require('../../lib/utils')
+const Teacher = require('../models/Teacher')
 
 module.exports = {
     index(req, res) {
-        return res.render('members/index')
+        Teacher.all(function(teachers) {
+            return res.render('teachers/index', { teachers })
+        })
     },
     create(req, res) {
-        return res.render('members/create')
+        return res.render('teachers/create')
     },
     post(req, res) {
         const keys = Object.keys(req.body)
@@ -15,14 +18,27 @@ module.exports = {
                 return res.send('Please, fill all fields')
             }
         }
-
-        return
+        
+        Teacher.create(req.body, function(teacher) {
+            return res.redirect(`/teachers/${teacher.id}`)
+        })
+    
     },
     show(req, res) {
-        return
+        Teacher.find(req.params.id), function(teacher) {
+            if(!teacher) return res.send('Teacher not found')
+
+            teacher.age = age(teacher.birth) // Chamando instruções do utils.js
+            
+            return res.render('teacher/show', { teacher })
+        }
     },
     edit(req, res) {
-        return
+        Teacher.find(req.params.id , function(teacher) {
+            if (!teacher) return res.send('Teacher not found!')
+            teacher.birth = date(teacher.birth).iso
+            return res.render('teacher/edit', { teacher })
+        })
     },
     put(req, res) {
         const keys = Object.keys(req.body)
@@ -32,10 +48,14 @@ module.exports = {
                 return res.send('Please, fill all fields')
             }
         }
-
-        return
+    
+        Teacher.update(req.body, function() {
+            return res.redirect(`/teachers/${req.body.id}`)
+        })
     },
     delete(req, res) {
-        return
-    }
+        Teacher.delete(req.body.id, function() {
+            return res.redirect(`/teachers`)
+        })
+    },
 }
