@@ -34,7 +34,11 @@ module.exports = {
         }
     },
     edit(req, res) {
-        return
+        Student.find(req.params.id , function(student) {
+            if (!student) return res.send('Student not found!')
+            student.birth = date(student.birth).iso
+            return res.render('student/edit', { student })
+        })
     },
     put(req, res) {
         const keys = Object.keys(req.body)
