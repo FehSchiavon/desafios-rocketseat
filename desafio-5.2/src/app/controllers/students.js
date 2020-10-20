@@ -49,7 +49,9 @@ module.exports = {
             }
         }
     
-        return
+        Student.update(req.body, function() {
+            return res.redirect(`/students/${req.body.id}`)
+        })
     },
     delete(req, res) {
         return
