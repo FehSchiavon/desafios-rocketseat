@@ -5,7 +5,7 @@
         type="url" 
         name="avatar_url"
         placeholder= "http://"
-        value="{{ instructor.avatar_url }}"
+        value="{{ teacher.avatar_url }}"
         >
     </div>
 </div>
@@ -17,7 +17,7 @@
             type="text" 
             name="name"
             placeholder= "Nome do Instrutor"
-            value="{{ instructor.name }}"
+            value="{{ teacher.name }}"
         >
     </div>
 </div>
@@ -28,7 +28,7 @@
         <input 
             type="date" 
             name="birth" 
-            value="{{ instructor.birth }}"
+            value="{{ teacher.birth }}"
         >
     </div>
 </div>
@@ -41,7 +41,7 @@
             type="radio" 
             name="gender" 
             value="M" 
-            {% if instructor.gender == 'M' %}
+            {% if teacher.gender == 'M' %}
             checked
             {% endif %} 
             >Masculino
@@ -51,7 +51,7 @@
             type="radio" 
             name="gender" 
             value="F"
-            {% if instructor.gender == 'F' %}
+            {% if teacher.gender == 'F' %}
             checked
             {% endif %} 
             >Feminino
@@ -66,7 +66,7 @@
             type="text"
             name="services"
             placeholder="Separe os serviços prestados por vírgula"
-            value="{{ instructor.services }}"
+            value="{{ teacher.services }}"
         >
     </div>
 </div>
