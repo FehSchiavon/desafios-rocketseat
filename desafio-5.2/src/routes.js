@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
-const teachers = require('./controllers/teachers')
-const students = require('./controllers/students')
+const teachers = require('./app/controllers/teachers')
+const students = require('./app/controllers/students')
 
 routes.get('/', function(req, res) {
     return res.redirect('/teachers')
@@ -15,12 +15,6 @@ routes.post('/teachers', teachers.post)
 routes.put('/teachers', teachers.put)
 routes.delete('/teachers', teachers.delete)
 
-// HTTP VERBS
-// GET: Receber RESOURCE
-// POST: Criar um novo RESOURCE com dados enviados
-// PUT: Atualizar RESOURCE
-// DELETE: Deletar RESOURCE 
-
 // MEMBER
 routes.get('/students', students.index)
 routes.get('/students/create', students.create)
@@ -31,3 +25,9 @@ routes.put('/students', students.put)
 routes.delete('/students', students.delete)
 
 module.exports = routes
+
+// HTTP VERBS
+// GET: Receber RESOURCE
+// POST: Criar um novo RESOURCE com dados enviados
+// PUT: Atualizar RESOURCE
+// DELETE: Deletar RESOURCE 
