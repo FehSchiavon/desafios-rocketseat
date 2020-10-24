@@ -1,5 +1,3 @@
-// 1591920000000
-
 function age(timestamp) {
     const today = new Date()
     const birthDate = new Date(timestamp)
