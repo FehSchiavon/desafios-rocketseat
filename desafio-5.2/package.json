@@ -1,7 +1,6 @@
 {
   "name": "desafio-5.2",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
@@ -12,7 +11,7 @@
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "nunjucks": "^3.2.0",
-    "pg": "^8.3.3"
+    "pg": "^8.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -23,5 +22,9 @@
     "ignore": [
       "data.json"
     ]
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
