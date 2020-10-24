@@ -3,9 +3,10 @@ const routes = express.Router()
 const teachers = require('./app/controllers/teachers')
 const students = require('./app/controllers/students')
 
-routes.get('/', function(req, res) {
+// Index não esta rederizando
+routes.get('/', function(req, res) { 
     return res.redirect('/teachers')
-})
+}) 
 
 // TEACHERS
 routes.get('/teachers', teachers.index)
