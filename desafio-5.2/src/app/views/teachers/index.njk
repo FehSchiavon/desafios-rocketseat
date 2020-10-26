@@ -7,8 +7,8 @@
     <table width="100%">
         <thead> {# Cabeçalho #}
             <tr> {# Linha #}
-                <th>Instructor</th> {# Colunas #}
-                <th>Atendimento</th> {# Colunas #}
+                <th>Professor</th> {# Colunas #}
+                <th>Nível de Formação</th> {# Colunas #}
                 <th>Ação</th> {# Colunas #}
             </tr>
         </thead>
@@ -19,7 +19,7 @@
                         <span style="background-image: url({{teacher.avatar_url}})"></span>
                         {{ teacher.name }}
                     </td> {# Colunas #}
-                    <td>{{ teacher.services }}</td>
+                    <td>{{ teacher.education_level }}</td>
                     <td><a href="/teachers/{{teacher.id}}">ver</a></td>
                 </tr>
             {% endfor %}
