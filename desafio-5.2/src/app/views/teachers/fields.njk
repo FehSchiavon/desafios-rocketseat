@@ -16,7 +16,7 @@
         <input 
             type="text" 
             name="name"
-            placeholder= "Nome do Instrutor"
+            placeholder= "Nome do Professor"
             value="{{ teacher.name }}"
         >
     </div>
@@ -34,28 +34,14 @@
 </div>
 
 <div class="item">
-    <div>Sexo</div>
+    <div>Nível de Escolaridade</div>
     <div>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="M" 
-            {% if teacher.gender == 'M' %}
-            checked
-            {% endif %} 
-            >Masculino
-        </span>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="F"
-            {% if teacher.gender == 'F' %}
-            checked
-            {% endif %} 
-            >Feminino
-        </span>
+        <select name="" id="">
+            <option value="">Sem Escolaridade</option>
+            <option value="">Ensino Fundamental</option>
+            <option value="">Ensino Médio</option>
+            <option value="">Ensino Superior</option>
+        </select>
     </div>
 </div>
 
