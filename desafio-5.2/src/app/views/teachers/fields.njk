@@ -16,7 +16,7 @@
         <input 
             type="text" 
             name="name"
-            placeholder= "Nome do Instrutor"
+            placeholder= "Nome do Professor"
             value="{{ teacher.name }}"
         >
     </div>
@@ -34,39 +34,49 @@
 </div>
 
 <div class="item">
-    <div>Sexo</div>
+    <div>Nível de Escolaridade</div>
     <div>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="M" 
-            {% if teacher.gender == 'M' %}
-            checked
-            {% endif %} 
-            >Masculino
-        </span>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="F"
-            {% if teacher.gender == 'F' %}
-            checked
-            {% endif %} 
-            >Feminino
-        </span>
+        <select name="education_level">
+            <option value="Sem Escolaridade">
+                {% if student.education_level == "A1" %}selected{% endif %}
+                Sem Escolaridade
+            </option>
+            <option value="Ensino Fundamental">
+                {% if student.education_level == "A1" %}selected{% endif %}
+                Ensino Fundamental
+            </option>
+            <option value="Ensino Médio">
+                {% if student.education_level == "A1" %}selected{% endif %}
+                Ensino Médio
+            </option>
+            <option value="Ensino Superior">
+                {% if student.education_level == "A1" %}selected{% endif %}
+                Ensino Superior
+            </option>
+        </select>
     </div>
 </div>
 
 <div class="item">
-    <div>Área de atuação</div>
+    <div>Tipo de Formação</div>
+    <div>
+        <input 
+            type="text" 
+            name="name"
+            placeholder= "Engenheiro"
+            value="{{ teacher.class_type }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Habilidades subjetivas</div>
     <div>
         <input 
             type="text"
             name="services"
-            placeholder="Separe os serviços prestados por vírgula"
-            value="{{ teacher.services }}"
+            placeholder="Separe sua outra habilidades por vírgula"
+            value="{{ teacher.subjects_taught }}"
         >
     </div>
 </div>
