@@ -32,7 +32,6 @@ module.exports = {
             data.education_level,
             data.class_type,
             data.subjects_taught,
-            data.created_at
         ]
 
         db.query(query, values, function(err, results) {
