@@ -32,6 +32,7 @@ module.exports = {
             data.education_level,
             data.class_type,
             data.subjects_taught,
+            date(Date.now()).iso
         ]
 
         db.query(query, values, function(err, results) {
@@ -40,8 +41,7 @@ module.exports = {
         })
     },
     find(id, callback) {
-        db.query(`
-            SELECT *
+        db.query(`SELECT *
             FROM my_teacher
             WHERE id = $1`, [id], function(err, results) {
                 if(err) throw `Database Error! ${err}`
