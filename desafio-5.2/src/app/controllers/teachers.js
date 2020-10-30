@@ -25,13 +25,15 @@ module.exports = {
     
     },
     show(req, res) {
-        Teacher.find(req.params.id), function(teacher) {
+        Teacher.find(req.params.id, function(teacher) {
             if(!teacher) return res.send('Teacher not found')
 
             teacher.age = age(teacher.birth_date)
-            
-            return res.render('teacher/show', { teacher })
-        }
+            teacher.subjects_taught = teacher.subjects_taught.split(',')
+            teacher.created_at = date(teacher.created_at.format)
+
+            return res.render('teachers/show', { teacher })
+        })
     },
     edit(req, res) {
         Teacher.find(req.params.id , function(teacher) {
