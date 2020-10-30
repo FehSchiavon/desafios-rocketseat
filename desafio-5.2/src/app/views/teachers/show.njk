@@ -23,15 +23,15 @@
 
         <div class="item">
             <div>Sexo</div>
-            <div>{{ "Masculino" if teacher.gender == "M" else "Feminino" }}</div>
+            {# <div>{{ "Masculino" if teacher.gender == "M" else "Feminino" }}</div> #}
         </div>
 
         <div class="item">
             <div>Acompanhamento</div>
             <div>
 
-                {% for service in teacher.services %}
-                    <span>{{ service }}</span>
+                {% for subjects in teacher.subjects_taught %}
+                    <span>{{ subjects }}</span>
                 {% endfor %}
 
             </div>

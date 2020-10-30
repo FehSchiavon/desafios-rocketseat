@@ -29,6 +29,7 @@ module.exports = {
             if(!teacher) return res.send('Teacher not found')
 
             teacher.age = age(teacher.birth_date)
+            teacher.subjects_taught = teacher.subjects_taught.split(',')
             
             return res.render('teacher/show', { teacher })
         }
