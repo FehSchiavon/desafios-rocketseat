@@ -22,19 +22,21 @@
         </div>
 
         <div class="item">
-            <div>Sexo</div>
-            {# <div>{{ "Masculino" if teacher.gender == "M" else "Feminino" }}</div> #}
-            {# Organization #}
+            <div>Nível de Escolaridade</div>
+            <div>{{ teacher.education_level }}</div>
         </div>
 
         <div class="item">
-            <div>Acompanhamento</div>
-            <div>
+            <div>Tipo de Formação</div>
+            <div>{{ teacher.class_type }}</div>
+        </div>
 
+        <div class="item">
+            <div>Habilidades subjetivas</div>
+            <div>
                 {% for subjects in teacher.subjects_taught %}
                     <span>{{ subjects }}</span>
                 {% endfor %}
-
             </div>
         </div>
 
