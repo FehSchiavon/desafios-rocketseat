@@ -3,7 +3,7 @@
 </h2>
 
 <p align="center"> 
-<img src="https://rocketseat.com.br/static/images/update/trofeu-home.svg" width="300" heigth="300">
+<img src="" width="300" heigth="300">
 </p>
 
 <p align="center">
