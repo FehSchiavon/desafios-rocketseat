@@ -30,6 +30,7 @@ module.exports = {
 
             teacher.age = age(teacher.birth_date)
             teacher.subjects_taught = teacher.subjects_taught.split(',')
+            console.log(teacher.created_at)
             teacher.created_at = date(teacher.created_at.format)
             console.log(teacher.created_at)
 
