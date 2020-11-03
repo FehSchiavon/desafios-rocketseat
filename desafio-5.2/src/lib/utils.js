@@ -16,7 +16,8 @@ module.exports = {
     },
     date(timestamp) {
         const date = new Date(timestamp)
-            
+        console.log(date)
+
         const year = date.getUTCFullYear()
         const month = `0${date.getUTCMonth() + 1}`.slice(-2)
         const day = `0${date.getUTCDate()}`.slice(-2)
