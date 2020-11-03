@@ -28,11 +28,11 @@ module.exports = {
         Teacher.find(req.params.id, function(teacher) {
             if(!teacher) return res.send('Teacher not found')
 
+            console.log(teacher.age)
             teacher.age = age(teacher.birth_date)
+            console.log(teacher.age)
             teacher.subjects_taught = teacher.subjects_taught.split(',')
-            console.log(teacher.created_at)
-            teacher.created_at = date(teacher.created_at.format)
-            console.log(teacher.created_at)
+            teacher.date = date(teacher.created_at.format)
 
             return res.render('teachers/show', { teacher })
         })
