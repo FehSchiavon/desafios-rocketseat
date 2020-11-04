@@ -30,8 +30,7 @@ module.exports = {
 
             teacher.age = age(teacher.birth_date)
             teacher.subjects_taught = teacher.subjects_taught.split(',')
-            console.log(teacher.create_at)            
-            teacher.date = date(teacher.create_at).format
+            teacher.date = date(teacher.created_at).format
             
 
             return res.render('teachers/show', { teacher })
