@@ -30,8 +30,7 @@ module.exports = {
 
             teacher.age = age(teacher.birth_date)
             teacher.subjects_taught = teacher.subjects_taught.split(',')
-            // teacher.date = date(teacher.created_at.format)
-            teacher.create_at = date(teacher.create_at)
+            teacher.date = date(teacher.created_at).format
 
             return res.render('teachers/show', { teacher })
         })
@@ -39,7 +38,8 @@ module.exports = {
     edit(req, res) {
         Teacher.find(req.params.id , function(teacher) {
             if (!teacher) return res.send('Teacher not found!')
-            teacher.birth = date(teacher.birth).iso
+            teacher.birth_date = date(teacher.birth_date).iso
+            console.log(teacher.education_level)
             return res.render('teachers/edit', { teacher })
         })
     },
