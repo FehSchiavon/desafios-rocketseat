@@ -37,20 +37,20 @@
     <div>Nível de Escolaridade</div>
     <div>
         <select name="education_level">
-            <option value="Sem Escolaridade">
-                {% if teacher.education_level == "Sem Escolaridade" %}selected{% endif %}
+            <option value="Sem Escolaridade"  {% if teacher.education_level == "Sem Escolaridade" %}selected{% endif %}>
+                {# {% if teacher.education_level == "Sem Escolaridade" %}selected{% endif %} #}
                 Sem Escolaridade
             </option>
-            <option value="Ensino Fundamental">
-                {% if teacher.education_level == "Ensino Fundamental" %}selected{% endif %}
+            <option value="Ensino Fundamental" {% if teacher.education_level == "Ensino Fundamental" %}selected{% endif %}>
+                {# {% if teacher.education_level == "Ensino Fundamental" %}selected{% endif %} #}
                 Ensino Fundamental
             </option>
-            <option value="Ensino Médio">
-                {% if teacher.education_level == "Ensino Médio" %}selected{% endif %}
+            <option value="Ensino Médio" {% if teacher.education_level == "Ensino Médio" %}selected{% endif %}>
+                {# {% if teacher.education_level == "Ensino Médio" %}selected{% endif %} #}
                 Ensino Médio
             </option>
-            <option value="Ensino Superior">
-                {% if teacher.education_level == "Ensino Superior" %}selected{% endif %}
+            <option value="Ensino Superior" {% if teacher.education_level == "Ensino Superior" %}selected{% endif %}>
+                {# {% if teacher.education_level == "Ensino Superior" %}selected{% endif %} #}
                 Ensino Superior
             </option>
         </select>
