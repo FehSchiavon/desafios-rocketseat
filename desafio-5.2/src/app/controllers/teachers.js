@@ -39,7 +39,6 @@ module.exports = {
         Teacher.find(req.params.id , function(teacher) {
             if (!teacher) return res.send('Teacher not found!')
             teacher.birth_date = date(teacher.birth_date).iso
-            console.log(teacher.education_level)
             return res.render('teachers/edit', { teacher })
         })
     },
