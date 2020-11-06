@@ -28,11 +28,11 @@ module.exports = {
         const values = [
             data.avatar_url,
             data.name,
-            data.birth_date,
+            date(data.birth_date).iso,
             data.education_level,
             data.class_type,
             data.subjects_taught,
-            data.created_at
+            date(Date.now()).iso
         ]
 
         db.query(query, values, function(err, results) {
