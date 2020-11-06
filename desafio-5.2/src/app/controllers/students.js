@@ -28,7 +28,9 @@ module.exports = {
         Student.find(req.params.id), function(student) {
             if(!student) return res.send('Student not found')
 
-            student.age = age(student.birth) // Chamando instruções do utils.js
+            student.age = age(student.birth_date)
+            student.subject_taught = teacher.subject_taught.split(',')
+            student.date = date(student.created_at).format
             
             return res.render('student/show', { student })
         }
