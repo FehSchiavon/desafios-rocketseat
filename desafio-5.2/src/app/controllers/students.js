@@ -32,14 +32,14 @@ module.exports = {
             student.subject_taught = teacher.subject_taught.split(',')
             student.date = date(student.created_at).format
             
-            return res.render('student/show', { student })
+            return res.render('students/show', { student })
         }
     },
     edit(req, res) {
         Student.find(req.params.id , function(student) {
             if (!student) return res.send('Student not found!')
-            student.birth = date(student.birth).iso
-            return res.render('student/edit', { student })
+            student.birth = date(student.birth_date).iso
+            return res.render('students/edit', { student })
         })
     },
     put(req, res) {
