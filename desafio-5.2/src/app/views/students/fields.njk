@@ -11,7 +11,7 @@
 </div>
 
 <div class="item">
-    <div>Nome</div>
+    <div>Estudante</div>
     <div>
         <input 
             type="text" 
@@ -22,111 +22,56 @@
 </div>
 
 <div class="item">
-    <div>Email</div>
-    <div>
-        <input 
-            type="email" 
-            name="email"
-            value="{{ student.email }}"
-        >
-    </div>
-</div>
-
-<div class="item">
     <div>Data de nascimento</div>
     <div>
         <input 
             type="date" 
-            name="birth" 
-            value="{{ student.birth }}"
+            name="birth_date" 
+            value="{{ student.birth_date }}"
         >
     </div>
 </div>
 
 <div class="item">
-    <div>Sexo</div>
+    <div>Nível de Escolaridade</div>
     <div>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="M" 
-            {% if student.gender == 'M' %}
-            checked
-            {% endif %} 
-            >Masculino
-        </span>
-        <span>
-            <input 
-            type="radio" 
-            name="gender" 
-            value="F"
-            {% if student.gender == 'F' %}
-            checked
-            {% endif %} 
-            >Feminino
-        </span>
-    </div>
-</div>
-
-<div class="item">
-    <div>Tipo Sanguíneo</div>
-    <div>
-        <select name="blood">
-            <option value="A1" selected>
-                {% if student.blood == "A1" %}selected{% endif %}
-                A+
+        <select name="education_level">
+            <option value="Sem Escolaridade"  {% if student.education_level == "Sem Escolaridade" %}selected{% endif %}>
+                Sem Escolaridade
             </option>
-            <option value="A0">
-                {% if student.blood == "A0" %}selected{% endif %}
-                A-
-            </option>            
-            <option value="B1">
-                {% if student.blood == "B1" %}selected{% endif %}
-                B+
+            <option value="Ensino Fundamental" {% if student.education_level == "Ensino Fundamental" %}selected{% endif %}>
+                Ensino Fundamental
             </option>
-            <option value="B0">
-                {% if student.blood == "B0" %}selected{% endif %}
-                B-
+            <option value="Ensino Médio" {% if student.education_level == "Ensino Médio" %}selected{% endif %}>
+                Ensino Médio
             </option>
-            <option value="AB1">
-                {% if student.blood == "AB1" %}selected{% endif %}
-                AB+
-            </option>
-            <option value="AB0">
-                {% if student.blood == "AB0" %}selected{% endif %}
-                AB-
-            </option>
-            <option value="O1">
-                {% if student.blood == "01" %}selected{% endif %}
-                O+
-            </option>
-            <option value="O0">
-                {% if student.blood == "O0" %}selected{% endif %}
-                O-
+            <option value="Ensino Superior" {% if student.education_level == "Ensino Superior" %}selected{% endif %}>
+                Ensino Superior
             </option>
         </select>
     </div>
 </div>
 
 <div class="item">
-    <div>Peso (kg)</div>
+    <div>Tipo de Formação</div>
     <div>
         <input 
-            type="number" 
-            name="weight" 
-            value="{{ student.weight }}"
+            type="text" 
+            name="class_type"
+            placeholder= "Engenheiro"
+            value="{{ student.class_type }}"
         >
     </div>
 </div>
 
 <div class="item">
-    <div>Altura (cm)</div>
+    <div>Habilidades subjetivas</div>
     <div>
         <input 
-            type="number" 
-            name="height" 
-            value="{{ student.height }}"
+            type="text"
+            name="subjects_taught"
+            placeholder="Separe sua outra habilidades por vírgula"
+            value="{{ student.subjects_taught }}"
         >
     </div>
 </div>
