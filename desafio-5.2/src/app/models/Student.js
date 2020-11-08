@@ -41,8 +41,7 @@ module.exports = {
         })
     },
     find(id, callback) {
-        db.query(`
-            SELECT *
+        db.query(`SELECT *
             FROM my_student
             WHERE id = $1`, [id], function(err, results) {
                 if(err) throw `Database Error! ${err}`
