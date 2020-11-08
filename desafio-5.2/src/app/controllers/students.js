@@ -25,15 +25,15 @@ module.exports = {
     
     },
     show(req, res) {
-        Student.find(req.params.id), function(student) {
+        Student.find(req.params.id, function(student) {
             if(!student) return res.send('Student not found')
 
             student.age = age(student.birth_date)
-            student.subject_taught = teacher.subject_taught.split(',')
+            student.subjects_taught = student.subjects_taught.split(',')
             student.date = date(student.created_at).format
             
             return res.render('students/show', { student })
-        }
+        })
     },
     edit(req, res) {
         Student.find(req.params.id , function(student) {
