@@ -20,8 +20,9 @@ module.exports = {
                 education_level,
                 class_type,
                 subjects_taught,
-                created_at
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+                created_at,
+                teacher_id
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
             RETURNING id
         `
 
@@ -32,7 +33,8 @@ module.exports = {
             data.education_level,
             data.class_type,
             data.subjects_taught,
-            date(Date.now()).iso
+            date(Date.now()).iso,
+            data.teacher
         ]
 
         db.query(query, values, function(err, results) {
@@ -79,6 +81,12 @@ module.exports = {
         db.query(`DELETE FROM my_student WHERE id = $1`, [id], function(err, results) {
             if(err) throw `Database Error! ${err}`
             return callback()
+        })
+    },
+    teachersSelectOptions(callback) {
+        db.query(`SELECT name, id FROM teachers`, function(err, results) {
+            if (err) throw 'Database Error!'
+            callback(results.rows)
         })
     }
 }
