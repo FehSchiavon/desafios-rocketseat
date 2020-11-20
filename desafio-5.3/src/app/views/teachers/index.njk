@@ -22,6 +22,7 @@
             <tr> {# Linha #}
                 <th>Professor(a)</th> {# Colunas #}
                 <th>Nível de Formação</th> {# Colunas #}
+                <th>Estudantes</th>
                 <th>Ação</th> {# Colunas #}
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                         {{ teacher.name }}
                     </td> {# Colunas #}
                     <td>{{ teacher.education_level }}</td>
+                    <td>{{ teacher.total_students }}</td>
                     <td><a href="/teachers/{{teacher.id}}">ver</a></td>
                 </tr>
             {% endfor %}

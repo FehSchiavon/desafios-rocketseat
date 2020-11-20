@@ -3,6 +3,7 @@ const Teacher = require('../models/Teacher')
 
 module.exports = {
     index(req, res) {
+        console.log(req.query)
         const { filter } = req.query
         
         if ( filter ) {
