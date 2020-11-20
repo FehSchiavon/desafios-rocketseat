@@ -54,14 +54,15 @@ module.exports = {
     },
     update(data, callback) {
         const query = `
-            UPDATE my_student SET
+        UPDATE my_student SET
             avatar_url=($1),
             name=($2),
             birth_date=($3),
             education_level=($4),
             class_type=($5),
-            subjects_taught=($6)
-            WHERE id = ($7)
+            subjects_taught=($6),
+            teacher_id=($7)
+        WHERE id = ($8)
         `
         const values = [
             data.avatar_url,
@@ -70,6 +71,7 @@ module.exports = {
             data.education_level,
             data.class_type,
             data.subjects_taught,
+            data.teacher,
             data.id
         ]
 
