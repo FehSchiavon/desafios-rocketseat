@@ -1,6 +1,7 @@
 {
-  "name": "desafio-5.2",
+  "name": "desafio-5.3",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
@@ -22,9 +23,5 @@
     "ignore": [
       "data.json"
     ]
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
