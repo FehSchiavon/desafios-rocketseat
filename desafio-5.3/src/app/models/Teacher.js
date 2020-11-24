@@ -42,7 +42,7 @@ module.exports = {
             callback(results.rows[0])
         })
     },
-    find(id, callback) { // Find
+    find(id, callback) {
         db.query(`SELECT *
             FROM my_teacher
             WHERE id = $1`, [id], function(err, results) {
