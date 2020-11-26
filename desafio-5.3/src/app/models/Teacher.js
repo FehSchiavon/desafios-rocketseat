@@ -4,7 +4,7 @@ const { date } = require('../../lib/utils')
 module.exports = {
     all(callback) {
         db.query(`
-        SELECT teachers.*, count(students) AS total_students 
+        SELECT my_teachers.*, count(students) AS total_students 
         FROM teachers 
         LEFT JOIN students ON (students.teacher_id = teachers.id)
         GROUP BY teachers.id
