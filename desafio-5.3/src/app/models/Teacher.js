@@ -4,10 +4,10 @@ const { date } = require('../../lib/utils')
 module.exports = {
     all(callback) {
         db.query(`
-        SELECT my_teachers.*, count(students) AS total_students 
-        FROM my_teachers 
-        LEFT JOIN my_students ON (my_students.teacher_id = teachers.id)
-        GROUP BY teachers.id
+        SELECT my_teacher.*, count(my_student) AS total_students 
+        FROM my_teacher 
+        LEFT JOIN my_student ON (my_student.teacher_id = teacher.id)
+        GROUP BY teacher.id
         ORDER BY total_students DESC`, function(err, results) {
             if(err) throw `Database Error! ${err}`
             callback(results.rows)
@@ -53,12 +53,12 @@ module.exports = {
     },
     findBy(filter, callback) {
         db.query(`
-        SELECT teachers.*, count(students) AS total_students 
-        FROM teachers 
-        LEFT JOIN students ON (students.teacher_id = teachers.id)
-        WHERE teachers.name ILIKE '%${filter}%'
-        OR teachers.services ILIKE '%${filter}%'
-        GROUP BY teachers.id
+        SELECT my_teacher.*, count(my_student) AS total_students 
+        FROM my_teacher 
+        LEFT JOIN my_student ON (my_student.teacher_id = teacher.id)
+        WHERE my_teacher.name ILIKE '%${filter}%'
+        OR my_teacher.subjects_taught ILIKE '%${filter}%'
+        GROUP BY my_teacher.id
         ORDER BY total_students DESC`, function(err, results) {
             if(err) throw `Database Error! ${err}`
             callback(results.rows)
