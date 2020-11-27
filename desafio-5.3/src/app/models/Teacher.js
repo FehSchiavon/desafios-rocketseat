@@ -6,8 +6,8 @@ module.exports = {
         db.query(`
         SELECT my_teacher.*, count(my_student) AS total_students 
         FROM my_teacher 
-        LEFT JOIN my_student ON (my_student.teacher_id = teacher.id)
-        GROUP BY teacher.id
+        LEFT JOIN my_student ON (my_student.teacher_id = my_teacher.id)
+        GROUP BY my_teacher.id
         ORDER BY total_students DESC`, function(err, results) {
             if(err) throw `Database Error! ${err}`
             callback(results.rows)
