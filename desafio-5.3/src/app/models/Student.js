@@ -42,9 +42,9 @@ module.exports = {
         })
     },
     find(id, callback) {
-        db.query(`SELECT students.*, teachers.name AS teacher_name 
-        FROM students 
-        LEFT JOIN teachers ON (students.teacher_id = teachers.id)
+        db.query(`SELECT my_student.*, my_teacher.name AS teacher_name 
+        FROM my_student 
+        LEFT JOIN my_teacher ON (my_student.teacher_id = my_teachers.id)
         WHERE students.id = $1`, [id], function(err, results) {
                 if(err) throw `Database Error! ${err}`
                 callback(results.rows[0])
@@ -86,7 +86,7 @@ module.exports = {
         })
     },
     teachersSelectOptions(callback) {
-        db.query(`SELECT name, id FROM teachers`, function(err, results) {
+        db.query(`SELECT name, id FROM my_teacher`, function(err, results) {
             if (err) throw 'Database Error!'
             callback(results.rows)
         })
