@@ -33,7 +33,7 @@ module.exports = {
             data.class_type,
             data.subjects_taught,
             date(Date.now()).iso,
-            data.teacher
+            data.teacher_id
         ]
 
         db.query(query, values, function(err, results) {
