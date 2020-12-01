@@ -33,7 +33,7 @@ module.exports = {
             data.class_type,
             data.subjects_taught,
             date(Date.now()).iso,
-            data.teacher
+            data.teacher_id
         ]
 
         db.query(query, values, function(err, results) {
@@ -44,7 +44,7 @@ module.exports = {
     find(id, callback) {
         db.query(`SELECT my_student.*, my_teacher.name AS teacher_name 
         FROM my_student 
-        LEFT JOIN my_teacher ON (my_student.teacher_id = my_teachers.id)
+        LEFT JOIN my_teacher ON (my_student.teacher_id = my_teacher.id)
         WHERE students.id = $1`, [id], function(err, results) {
                 if(err) throw `Database Error! ${err}`
                 callback(results.rows[0])
