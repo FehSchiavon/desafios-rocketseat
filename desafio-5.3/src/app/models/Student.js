@@ -45,7 +45,7 @@ module.exports = {
         db.query(`SELECT my_student.*, my_teacher.name AS teacher_name 
         FROM my_student 
         LEFT JOIN my_teacher ON (my_student.teacher_id = my_teacher.id)
-        WHERE students.id = $1`, [id], function(err, results) {
+        WHERE my_student.id = $1`, [id], function(err, results) {
                 if(err) throw `Database Error! ${err}`
                 callback(results.rows[0])
             }

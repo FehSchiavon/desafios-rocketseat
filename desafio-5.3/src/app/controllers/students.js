@@ -28,7 +28,6 @@ module.exports = {
     
     },
     show(req, res) {
-        // Problem route Find
         Student.find(req.params.id, function(student) {
             if(!student) return res.send('Student not found')
 
