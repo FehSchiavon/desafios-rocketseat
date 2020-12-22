@@ -57,3 +57,9 @@ function createPagination(pagination) {
 
     pagination.innerHTML = elements
 }
+
+const pagination = document.querySelector(".pagination")
+
+if (pagination) {
+    createPagination(pagination)
+}
