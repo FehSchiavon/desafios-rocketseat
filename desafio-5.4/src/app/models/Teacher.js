@@ -95,5 +95,40 @@ module.exports = {
             if(err) throw `Database Error! ${err}`
             return callback()
         })
+    },
+    paginate(params) {
+        const { filter, limit, offset, callback } = params
+
+        let query = "",
+            filterQuery = "",
+            totalQuery = `(
+                SELECT count(*) FROM my_teacher
+            ) AS total`
+
+        if (filter) {
+            filterQuery = `
+            WHERE my_teacher.name ILIKE '%${filter}%'
+            OR my_teacher.services ILIKE '%${filter}%'
+            `
+
+            totalQuery = `(
+                SELECT count(*) FROM my_teacher
+                ${filterQuery}
+            ) AS total`
+        }
+
+        query = `
+        SELECT my_teacher.*, ${totalQuery} , count(my_student) AS total_students 
+        FROM my_teacher
+        LEFT JOIN my_student ON (my_teacher.id = my_student.teacher_id)
+        ${filterQuery}
+        GROUP BY my_teacher.id LIMIT $1 OFFSET $2
+        `
+
+        db.query(query, [limit, offset], function(err, results) {
+            if (err) throw 'Database Error!'
+
+            callback(results.rows)
+        })
     }
 }
