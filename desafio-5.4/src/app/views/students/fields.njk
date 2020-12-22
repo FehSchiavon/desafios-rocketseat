@@ -1,0 +1,94 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+        type="url" 
+        name="avatar_url"
+        placeholder= "http://"
+        value="{{ student.avatar_url }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Aluno</div>
+    <div>
+        <input 
+            type="text" 
+            name="name"
+            placeholder= "Nome do Aluno"
+            value="{{ student.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth_date" 
+            value="{{ student.birth_date }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Nível de Escolaridade</div>
+    <div>
+        <select name="education_level">
+            <option value="Sem Escolaridade"  {% if student.education_level == "Sem Escolaridade" %}selected{% endif %}>
+                Sem Escolaridade
+            </option>
+            <option value="Ensino Fundamental" {% if student.education_level == "Ensino Fundamental" %}selected{% endif %}>
+                Ensino Fundamental
+            </option>
+            <option value="Ensino Médio" {% if student.education_level == "Ensino Médio" %}selected{% endif %}>
+                Ensino Médio
+            </option>
+            <option value="Ensino Superior" {% if student.education_level == "Ensino Superior" %}selected{% endif %}>
+                Ensino Superior
+            </option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Tipo de Formação</div>
+    <div>
+        <input 
+            type="text" 
+            name="class_type"
+            placeholder= "Engenheiro"
+            value="{{ student.class_type }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Habilidades subjetivas</div>
+    <div>
+        <input 
+            type="text"
+            name="subjects_taught"
+            placeholder="Separe sua outra habilidades por vírgula"
+            value="{{ student.subjects_taught }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Professor</div>
+    <div>
+        <select name="teacher_id">
+            {% for teacher in teacherOptions %}
+              <option value="{{teacher.id}}" 
+                {% if my_student.teacher_id == teacher.id %}selected{% endif %}>
+                {{teacher.name}}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<button type="submit">Salvar</button>
